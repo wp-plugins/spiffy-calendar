@@ -62,11 +62,11 @@ Installing:
 
 3. Configure Calendar using the following pages in the admin panel:
 
-   Calendar -> Manage Events
+   Spiffy Calendar -> Manage Events
 
-   Calendar -> Manage Categories
+   Spiffy Calendar -> Manage Categories
 
-   Calendar -> Calendar Options
+   Spiffy Calendar -> Calendar Options
 
 4. Edit or create a page on your blog which includes the shortcode [spiffy-calendar] and visit the page you have edited or created. You should see your calendar in action.
 
@@ -78,8 +78,6 @@ Installing:
 *	[spiffy-todays-list] for the list of today's events
 
 All of the shortcodes accept a comma separated list of category IDs, such as cat_list='1,4'.
-
-If you don't want the times or images to appear in the large calendar you can hide them using CSS.
 
 == Frequently Asked Questions ==
 
