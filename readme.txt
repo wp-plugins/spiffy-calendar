@@ -12,11 +12,9 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 == Description ==
 
-A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage your events and appointments and display them to the world on your website.
-
 [Demo](http://stofko.ca/spiffy-calendar/)
 
-Features:
+= Features =
 
 *	Post/page displays include:
 	* Standard monthly calendar grid 
