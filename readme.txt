@@ -12,6 +12,8 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 == Description ==
 
+A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage and display your events and appointments.
+
 [Demo](http://stofko.ca/spiffy-calendar/)
 
 = Features =
