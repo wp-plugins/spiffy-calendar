@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.0.0
+Version: 1.0.1
 Author: Bev Stofko
 
 Credits:
@@ -1621,8 +1621,8 @@ function toggleVisibility(id) {
 
 	function widget_events_calendar($args) {
 		extract($args);
-		$the_title = stripslashes(get_option('events_calendar_widget_title'));
-		$the_cats = stripslashes(get_option('events_calendar_widget_cats'));
+		$the_title = stripslashes(get_option('spiffy_calendar_widget_title'));
+		$the_cats = stripslashes(get_option('spiffy_calendar_widget_cats'));
 		$widget_title = empty($the_title) ? __('Calendar','spiffy-calendar') : $the_title;
 		$the_events = minical($the_cats);
 		if ($the_events != '') {
@@ -1634,11 +1634,11 @@ function toggleVisibility(id) {
 	}
 
 	function widget_events_calendar_control() {
-		$widget_title = stripslashes(get_option('events_calendar_widget_title'));
-		$widget_cats = stripslashes(get_option('events_calendar_widget_cats'));
+		$widget_title = stripslashes(get_option('spiffy_calendar_widget_title'));
+		$widget_cats = stripslashes(get_option('spiffy_calendar_widget_cats'));
 		if (isset($_POST['events_calendar_widget_title']) || isset($_POST['events_calendar_widget_cats'])) {
-			update_option('events_calendar_widget_title',strip_tags($_POST['events_calendar_widget_title']));
-			update_option('events_calendar_widget_cats',strip_tags($_POST['events_calendar_widget_cats']));
+			update_option('spiffy_calendar_widget_title',strip_tags($_POST['spiffy_calendar_widget_title']));
+			update_option('spiffy_calendar_widget_cats',strip_tags($_POST['spiffy_calendar_widget_cats']));
 		}
 		?>
 		<p>
@@ -1665,8 +1665,8 @@ function toggleVisibility(id) {
 
 	function widget_calendar_today($args) {
 		extract($args);
-		$the_title = stripslashes(get_option('calendar_today_widget_title'));
-		$the_cats = stripslashes(get_option('calendar_today_widget_cats'));
+		$the_title = stripslashes(get_option('spiffy_calendar_today_widget_title'));
+		$the_cats = stripslashes(get_option('spiffy_calendar_today_widget_cats'));
 		$widget_title = empty($the_title) ? __('Today\'s Events','spiffy-calendar') : $the_title;
 		$the_events = $this->todays_events($the_cats);
 		if ($the_events != '') {
@@ -1678,11 +1678,11 @@ function toggleVisibility(id) {
 	}
 
 	function widget_calendar_today_control() {
-		$widget_title = stripslashes(get_option('calendar_today_widget_title'));
-		$widget_cats = stripslashes(get_option('calendar_today_widget_cats'));
+		$widget_title = stripslashes(get_option('spiffy_calendar_today_widget_title'));
+		$widget_cats = stripslashes(get_option('spiffy_calendar_today_widget_cats'));
 		if (isset($_POST['calendar_today_widget_title']) || isset($_POST['calendar_today_widget_cats'])) {
-			update_option('calendar_today_widget_title',strip_tags($_POST['calendar_today_widget_title']));
-			update_option('calendar_today_widget_cats',strip_tags($_POST['calendar_today_widget_cats']));
+			update_option('spiffy_calendar_today_widget_title',strip_tags($_POST['calendar_today_widget_title']));
+			update_option('spiffy_calendar_today_widget_cats',strip_tags($_POST['calendar_today_widget_cats']));
 		}
 		?>
 		<p>
@@ -1708,8 +1708,8 @@ function toggleVisibility(id) {
 
 	function widget_calendar_upcoming($args) {
 		extract($args);
-		$the_title = stripslashes(get_option('calendar_upcoming_widget_title'));
-		$the_cats = stripslashes(get_option('calendar_upcoming_widget_cats'));
+		$the_title = stripslashes(get_option('spiffy_calendar_upcoming_widget_title'));
+		$the_cats = stripslashes(get_option('spiffy_calendar_upcoming_widget_cats'));
 		$widget_title = empty($the_title) ? __('Upcoming Events','spiffy-calendar') : $the_title;
 		$the_events = $this->upcoming_events($the_cats);
 		if ($the_events != '') {
@@ -1721,11 +1721,11 @@ function toggleVisibility(id) {
 	}
 
 	function widget_calendar_upcoming_control() {
-		$widget_title = stripslashes(get_option('calendar_upcoming_widget_title'));
-		$widget_cats = stripslashes(get_option('calendar_upcoming_widget_cats'));
+		$widget_title = stripslashes(get_option('spiffy_calendar_upcoming_widget_title'));
+		$widget_cats = stripslashes(get_option('spiffy_calendar_upcoming_widget_cats'));
 		if (isset($_POST['calendar_upcoming_widget_title']) || isset($_POST['calendar_upcoming_widget_cats'])) {
-			update_option('calendar_upcoming_widget_title',strip_tags($_POST['calendar_upcoming_widget_title']));
-			update_option('calendar_upcoming_widget_cats',strip_tags($_POST['calendar_upcoming_widget_cats']));
+			update_option('spiffy_calendar_upcoming_widget_title',strip_tags($_POST['calendar_upcoming_widget_title']));
+			update_option('spiffy_calendar_upcoming_widget_cats',strip_tags($_POST['calendar_upcoming_widget_cats']));
 		}
 		?>
 		<p>
