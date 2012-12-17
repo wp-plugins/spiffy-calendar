@@ -4,7 +4,7 @@ Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
 Tested up to: 3.5
-Stable tag: 1.0.2
+Stable tag: 1.0.2a
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
