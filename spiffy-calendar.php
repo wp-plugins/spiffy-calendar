@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.0.2
+Version: 1.0.2a
 Author: Bev Stofko
 
 Credits:
@@ -119,11 +119,7 @@ Class Spiffy_Calendar
 			$wpdb->get_results($sql);
 
 			$this->default_styles();
-		} else {
-			// create css file from saved options
-			$options = $this->get_options();
-			$this->write_styles ($options['calendar_style']);
-		}
+		} 
 	}
 
 	function get_options() {
@@ -150,6 +146,10 @@ Class Spiffy_Calendar
 		if ($use_options['calendar_style'] == '' ) {
 			$use_options['calendar_style'] = $this->default_styles();
 		}
+
+		if (!file_exists( plugin_dir_path(__FILE__). 'spiffycal.css')) {
+			$this->write_styles($use_options['calendar_style']);
+		} 
 
 		return $use_options;
 	}

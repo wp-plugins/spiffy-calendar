@@ -97,7 +97,7 @@ All of the shortcodes accept a comma separated list of category IDs, such as cat
 
 == Changelog ==
 
-= Version 1.0.2 December 17, 2012 =
+= Version 1.0.2a December 17, 2012 =
 
 * Make sure CSS file is recreated after plugin upgrade
 
