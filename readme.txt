@@ -3,8 +3,8 @@ Author: Bev Stofko
 Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
-Tested up to: 3.4.2
-Stable tag: 1.0.1
+Tested up to: 3.5
+Stable tag: 1.0.2
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -96,6 +96,10 @@ All of the shortcodes accept a comma separated list of category IDs, such as cat
 4. Event manager
 
 == Changelog ==
+
+= Version 1.0.2 December 17, 2012 =
+
+* Make sure CSS file is recreated after plugin upgrade
 
 = Version 1.0.1 November 2012 =
 
