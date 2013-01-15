@@ -4,7 +4,7 @@ Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
 Tested up to: 3.5
-Stable tag: 1.0.2a
+Stable tag: 1.0.3
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -96,6 +96,10 @@ All of the shortcodes accept a comma separated list of category IDs, such as cat
 4. Event manager
 
 == Changelog ==
+
+= Version 1.0.3 January 15, 2013 =
+
+* Fix end time on mini-calendar hover
 
 = Version 1.0.2a December 17, 2012 =
 
