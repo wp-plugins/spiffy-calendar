@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.0.3
+Version: 1.1.0
 Author: Bev Stofko
 
 Credits:
@@ -136,6 +136,7 @@ Class Spiffy_Calendar
 						'display_upcoming' => 'true',
 						'display_upcoming_days' => 7,
 						'enable_categories' => 'false',
+						'enable_new_window' => 'false',
 					);
 		$saved_options = get_option($this->spiffy_options);
 		if (!empty($saved_options)) {
@@ -1038,6 +1039,12 @@ function toggleVisibility(id) {
 				$options['enable_categories'] = 'false';
 			}
 
+			if ($_POST['enable_new_window'] == 'on') {
+				$options['enable_new_window'] = 'true';
+			} else {
+				$options['enable_new_window'] = 'false';
+			}
+
 			// Check to see if we are replacing the original style
 			if (isset($_POST['reset_styles'])) {
 				if ($_POST['reset_styles'] == 'on') {
@@ -1101,6 +1108,14 @@ function toggleVisibility(id) {
 		} else {
 			$yes_enable_categories = '';
 			$no_enable_categories = 'selected="selected"';
+		}
+
+		if ($options['enable_new_window'] == 'true') {
+			$yes_enable_new_window = 'selected="selected"';
+			$no_enable_new_window = '';
+		} else {
+			$yes_enable_new_window = '';
+			$no_enable_new_window = 'selected="selected"';
 		}
 
 		$subscriber_selected = '';
@@ -1214,6 +1229,14 @@ function toggleVisibility(id) {
 				<td><select name="enable_categories">
 					<option value="on" <?php echo $yes_enable_categories ?>><?php _e('Yes','spiffy-calendar') ?></option>
 					<option value="off" <?php echo $no_enable_categories ?>><?php _e('No','spiffy-calendar') ?></option>
+				  </select>
+				</td>
+				</tr>
+				<tr>
+				<td><legend><?php _e('Open event links in new window?','spiffy-calendar'); ?></legend></td>
+				<td><select name="enable_new_window">
+					<option value="on" <?php echo $yes_enable_new_window ?>><?php _e('Yes','spiffy-calendar') ?></option>
+					<option value="off" <?php echo $no_enable_new_window ?>><?php _e('No','spiffy-calendar') ?></option>
 				  </select>
 				</td>
 				</tr>
@@ -1801,10 +1824,20 @@ function toggleVisibility(id) {
 		if ($options['display_author'] == 'true' || $event->event_time != "00:00:00") {
 			$popup_details .= '<div class="event-content-break"></div><br />';
 		}
-		if ($event->event_link != '') { $linky = stripslashes($event->event_link); }
-		else { $linky = '#'; }
+		if ($event->event_link != '') { 
+			$linky = stripslashes($event->event_link); 
+			if ($options['enable_new_window'] == 'true') {
+				$target = ' target="_blank"';
+			} else {
+				$target = '';
+			}
 
-		$details = '<div class="calnk"><a href="'.$linky.'" '.$style.'><b>' . stripslashes($event->event_title) . '</b>';
+		} else { 
+			$linky = '#'; 
+			$target = '';
+		}
+
+		$details = '<div class="calnk"><a href="'.$linky.'" '.$style.$target.'><b>' . stripslashes($event->event_title) . '</b>';
 		if ($options['display_detailed'] == 'true') {
 			if ($time != '') {
 				$details .= '<span class="calnk-time"><br />' . $time;
@@ -2251,7 +2284,7 @@ ORDER BY event_id";
 		$output = '';
 		if (count($events)) {
 			// Setup the wrapper
-			$output = '<eiv class="calnk"><a href="#" style="background-color:#F6F79B;">'.$day_of_week.'<div>';
+			$output = '<div class="calnk"><a href="#" style="background-color:#F6F79B;">'.$day_of_week.'<div>';
 			// Now process the events
 			foreach($events as $event) {
 				if ($event->event_time == '00:00:00') { 
