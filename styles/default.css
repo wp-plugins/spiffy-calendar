@@ -178,7 +178,7 @@ div.event {
 .page-todays-events {
 	font-size:80%;
 }
-.calendar-table table,tbody,tr,td {
+.calendar-table table, .calendar-table tbody, .calendar-table tr, .calendar-table td {
 	margin:0 !important;
 	padding:0 !important;
 }

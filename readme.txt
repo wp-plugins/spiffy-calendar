@@ -4,7 +4,7 @@ Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
 Tested up to: 3.5
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -96,6 +96,10 @@ All of the shortcodes accept a comma separated list of category IDs, such as cat
 4. Event manager
 
 == Changelog ==
+
+= Version 1.1.1 February 7, 2013 =
+
+* Fix default CSS to confine table styles to Spiffy Calendar tables
 
 = Version 1.1.0 January 22, 2013 =
 
