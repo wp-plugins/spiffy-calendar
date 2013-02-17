@@ -24,8 +24,9 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 	* Lists of today's events
 	* Lists of upcoming events
 *	Widgets include:
-	* Widget to show today's events
-	* Widget to show upcoming events 
+	* Show today's events
+	* Show upcoming events 
+	* Mini Calendar
 *	Other features:
 	* Displays may be filtered by category list
 	* Mouse-over details for each event
