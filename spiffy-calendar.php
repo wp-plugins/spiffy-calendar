@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.1.1
+Version: 1.1.2
 Author: Bev Stofko
 
 Credits:
@@ -1221,7 +1221,7 @@ function toggleVisibility(id) {
 					<option value="on" <?php echo $yes_disp_upcoming ?>><?php _e('Yes','spiffy-calendar') ?></option>
 					<option value="off" <?php echo $no_disp_upcoming ?>><?php _e('No','spiffy-calendar') ?></option>
 				  </select>
-	<?php _e('for','spiffy-calendar'); ?> <input type="text" name="display_upcoming_days" value="<?php echo $upcoming_days ?>" size="1" maxlength="2" /> <?php _e('days into the future','spiffy-calendar'); ?>
+	<?php _e('for','spiffy-calendar'); ?> <input type="text" name="display_upcoming_days" value="<?php echo $upcoming_days ?>" size="1" maxlength="3" /> <?php _e('days into the future','spiffy-calendar'); ?>
 				</td>
 				</tr>
 				<tr>
@@ -1642,8 +1642,11 @@ function toggleVisibility(id) {
 		if (!function_exists('wp_register_sidebar_widget'))
 			return;
 
-		wp_register_sidebar_widget('spiffy_events_calendar',__('Calendar','spiffy-calendar'),'widget_events_calendar',array('description'=>'A calendar of your events'));
-		wp_register_widget_control('spiffy_events_calendar','spiffy_events_calendar','widget_events_calendar_control');
+		wp_register_sidebar_widget('spiffy_events_calendar',__('Mini Calendar','spiffy-calendar'),
+			array($this, 'widget_events_calendar'),
+			array('description'=>'A calendar of your events'));
+		wp_register_widget_control('spiffy_events_calendar','spiffy_events_calendar',
+			array($this, 'widget_events_calendar_control'));
 	}
 
 	function widget_events_calendar($args) {
@@ -1651,7 +1654,7 @@ function toggleVisibility(id) {
 		$the_title = stripslashes(get_option('spiffy_calendar_widget_title'));
 		$the_cats = stripslashes(get_option('spiffy_calendar_widget_cats'));
 		$widget_title = empty($the_title) ? __('Calendar','spiffy-calendar') : $the_title;
-		$the_events = minical($the_cats);
+		$the_events = $this->minical($the_cats);
 		if ($the_events != '') {
 			echo $before_widget;
 			echo $before_title . $widget_title . $after_title;
@@ -2475,4 +2478,5 @@ ORDER BY event_id";
 if (class_exists("Spiffy_Calendar")) {
 	$spiffy_calendar = new Spiffy_Calendar();
 }
+
 ?>

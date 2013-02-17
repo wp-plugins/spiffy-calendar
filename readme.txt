@@ -3,8 +3,8 @@ Author: Bev Stofko
 Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
-Tested up to: 3.5
-Stable tag: 1.1.1
+Tested up to: 3.5.1
+Stable tag: 1.2.0
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -96,6 +96,11 @@ All of the shortcodes accept a comma separated list of category IDs, such as cat
 4. Event manager
 
 == Changelog ==
+
+= Version 1.1.2 February 17, 2013 =
+
+* Allow 3 digits for upcoming days configuration
+* Fix minicalendar widget (has been missing since day 1)
 
 = Version 1.1.1 February 7, 2013 =
 
