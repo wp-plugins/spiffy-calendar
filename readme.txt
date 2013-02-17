@@ -97,6 +97,7 @@ All of the shortcodes accept a comma separated list of category IDs, such as cat
 
 == Changelog ==
 
+
 = Version 1.1.2 February 17, 2013 =
 
 * Allow 3 digits for upcoming days configuration
