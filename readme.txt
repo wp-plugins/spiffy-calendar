@@ -55,10 +55,6 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 == Installation ==
 
-The installation is extremely simple and straightforward. It only takes a second.
-
-Installing:
-
 1. Install the plugin from the Wordpress repository in the usual way.
 
 2. Activate the plugin on your WordPress plugins page
@@ -71,9 +67,7 @@ Installing:
 
    Spiffy Calendar -> Calendar Options
 
-4. Edit or create a page on your blog which includes the shortcode [spiffy-calendar] and visit the page you have edited or created. You should see your calendar in action.
-
-5. Shortcodes available are:
+4. Edit or create a page on your blog which includes one of the shortcodes:
 
 * 	[spiffy-calendar] for the monthly calendar
 *	[spiffy-minical] for the mini version of the monthly calendar
