@@ -69,12 +69,12 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 4. Edit or create a page on your blog which includes one of the shortcodes:
 
-* 	[spiffy-calendar] for the monthly calendar
-*	[spiffy-minical] for the mini version of the monthly calendar
-*	[spiffy-upcoming-list] for the upcoming events list
-*	[spiffy-todays-list] for the list of today's events
+[spiffy-calendar] for the monthly calendar
+[spiffy-minical] for the mini version of the monthly calendar
+[spiffy-upcoming-list] for the upcoming events list
+[spiffy-todays-list] for the list of today's events
 
-5. Add one of the spiffy widgets to your theme widget areas.
+Add one of the spiffy widgets to your theme widget areas.
 
 All of the shortcodes and widgets accept a comma separated list of category IDs, such as cat_list='1,4'.
 
