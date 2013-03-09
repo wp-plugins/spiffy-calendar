@@ -74,7 +74,9 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 *	[spiffy-upcoming-list] for the upcoming events list
 *	[spiffy-todays-list] for the list of today's events
 
-All of the shortcodes accept a comma separated list of category IDs, such as cat_list='1,4'.
+5. Add one of the spiffy widgets to your theme widget areas.
+
+All of the shortcodes and widgets accept a comma separated list of category IDs, such as cat_list='1,4'.
 
 == Frequently Asked Questions ==
 
