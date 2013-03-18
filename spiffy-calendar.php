@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.1.2
+Version: 1.1.3
 Author: Bev Stofko
 
 Credits:
@@ -1834,13 +1834,15 @@ function toggleVisibility(id) {
 			} else {
 				$target = '';
 			}
+			$show = '';
 
 		} else { 
 			$linky = '#'; 
 			$target = '';
+			$show = ' onclick="alert(\'clicked\');jQuery(this).children(\'.popup\').toggle();return false;"';
 		}
 
-		$details = '<div class="calnk"><a href="'.$linky.'" '.$style.$target.'><b>' . stripslashes($event->event_title) . '</b>';
+		$details = '<div class="calnk"><a href="'.$linky.'" '.$style.$target.$show.'><b>' . stripslashes($event->event_title) . '</b>';
 		if ($options['display_detailed'] == 'true') {
 			if ($time != '') {
 				$details .= '<span class="calnk-time"><br />' . $time;
@@ -1853,7 +1855,7 @@ function toggleVisibility(id) {
 				$details .= '<br /><img class="calnk-icon" src="' . $image[0] . '" />';
 			}
 		}
-		$details .= '<div '.$style.'>' . $popup_details . '' . stripslashes($event->event_desc) . '</div></a></div>';
+		$details .= '<div class="popup" '.$style.'>' . $popup_details . '' . stripslashes($event->event_desc) . '</div></a></div>';
 
 		return $details;
 	}
@@ -2287,7 +2289,7 @@ ORDER BY event_id";
 		$output = '';
 		if (count($events)) {
 			// Setup the wrapper
-			$output = '<div class="calnk"><a href="#" style="background-color:#F6F79B;">'.$day_of_week.'<div>';
+			$output = '<div class="calnk"><a href="#" onclick="jQuery(this).children(\'.popup\').toggle();return false;" style="background-color:#F6F79B;">'.$day_of_week.'<div class="popup">';
 			// Now process the events
 			foreach($events as $event) {
 				if ($event->event_time == '00:00:00') { 
