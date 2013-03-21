@@ -4,7 +4,7 @@ Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -96,6 +96,10 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 4. Event manager
 
 == Changelog ==
+
+= Version 1.1.5 March 21, 2013 =
+
+* Fix title and category selection on mini calendar widget
 
 = Version 1.1.4 March 20, 2013 = 
 

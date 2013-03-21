@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.1.4
+Version: 1.1.5
 Author: Bev Stofko
 
 Credits:
@@ -1667,8 +1667,8 @@ function toggleVisibility(id) {
 		$widget_title = stripslashes(get_option('spiffy_calendar_widget_title'));
 		$widget_cats = stripslashes(get_option('spiffy_calendar_widget_cats'));
 		if (isset($_POST['events_calendar_widget_title']) || isset($_POST['events_calendar_widget_cats'])) {
-			update_option('spiffy_calendar_widget_title',strip_tags($_POST['spiffy_calendar_widget_title']));
-			update_option('spiffy_calendar_widget_cats',strip_tags($_POST['spiffy_calendar_widget_cats']));
+			update_option('spiffy_calendar_widget_title',strip_tags($_POST['events_calendar_widget_title']));
+			update_option('spiffy_calendar_widget_cats',strip_tags($_POST['events_calendar_widget_cats']));
 		}
 		?>
 		<p>
