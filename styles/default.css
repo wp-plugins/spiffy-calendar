@@ -1,0 +1,209 @@
+/* Default styles for Spiffy Calendar */
+
+.calnk {
+	padding-bottom: 5px;
+}
+.calnk a:hover {
+	background-position:0 0;
+	text-decoration:none;		
+	color:#000000;
+	border-bottom:1px dotted #ccc;
+}
+.calnk a:visited {
+	text-decoration:none;
+	color:#000000;
+	border-bottom:1px dotted #ccc;
+}
+.calnk a {
+	text-decoration:none; 
+	color:#000000; 
+	border-bottom:1px dotted #ccc;
+}
+.calnk a div { 
+	display:none; 
+	margin-left:10px;
+}
+.calnk a:hover div {
+	color:#333333; 
+	background:#F6F79B; 
+	display:block;
+	position:absolute; 
+	margin-top:1px; 
+	padding:5px; 
+	width:150px; 
+	z-index:100;
+	line-height:1.2em;
+	box-shadow:2px 2px 2px #c0c0c0;
+}
+.calnk a:hover div div {
+	box-shadow:none;
+}
+.calnk-icon {
+	max-width: 76px;
+	display: block;
+	padding: 0;
+	margin-top: 3px;
+}
+.calnk div img {
+	max-width: 140px;
+	display: block;
+	padding: 0;
+	margin: 3px auto;
+}
+
+.calendar-table {
+	border:0 !important;
+	width:100% !important;
+	border-collapse:separate !important;
+	border-spacing:2px !important;
+}
+.calendar-table .calnk-icon {
+	margin: 0 auto;
+}
+.calendar-heading {
+	height:25px;
+	text-align:center;
+	border:1px solid #D6DED5;
+	background-color:#E4EBE3;
+}
+.calendar-next, .calendar-prev {
+	width:25%;
+	text-align:center;
+	font-size:.9em;
+}
+.calendar-next a, .calendar-prev a {
+	text-decoration:none;
+}
+.calendar-month {
+	width:50%;
+	text-align:center;
+	font-weight:bold;
+}
+.normal-day-heading {
+	text-align:center;
+	width:25px;
+	height:25px;
+	font-size:0.8em;
+	border:1px solid #DFE6DE;
+	background-color:#EBF2EA;
+}
+.weekend-heading {
+	text-align:center;
+	width:25px;
+	height:25px;
+	font-size:0.8em;
+	border:1px solid #DFE6DE;
+	background-color:#EBF2EA;
+	color:#FF0000;
+}
+.day-with-date {
+	vertical-align:text-top;
+	text-align:left;
+	width:60px;
+	height:60px;
+	border:1px solid #DFE6DE;
+}
+.no-events {
+}
+.day-without-date {
+	width:60px;
+	height:60px;
+	border:1px solid #E9F0E8;
+}
+div.weekend {
+	color:#FF0000;
+}
+.current-day {
+	vertical-align:text-top;
+	text-align:left;
+	width:60px;
+	height:60px;
+	border:1px solid #BFBFBF;
+	background-color:#E4EBE3;
+}
+div.event {
+	font-size:0.75em;
+}
+.kjo-link {
+	font-size:0.75em;
+	text-align:center;
+}
+.calendar-date-switcher {
+	height:25px;
+	text-align:center;
+	border:1px solid #D6DED5;
+	background-color:#E4EBE3;
+}
+.calendar-date-switcher form {
+	margin:2px;
+}
+.calendar-date-switcher input {
+	border:1px #D6DED5 solid;
+	margin:0;
+}
+.calendar-date-switcher select {
+	border:1px #D6DED5 solid;
+	margin:0;
+}
+.calnk a:hover div div.event-title {
+	padding:0;
+	text-align:center;
+	font-weight:bold;
+	font-size:1.2em;
+	margin-left:0px;
+}
+.calnk a:hover div div.event-title-break {
+	width:96%;
+	text-align:center;
+	height:1px;
+	margin-top:5px;
+	margin-right:2%;
+	padding:0;
+	background-color:#000000;
+	margin-left:0px;
+}
+.calnk a:hover div div.event-content-break {
+	width:96%;
+	text-align:center;
+	height:1px;
+	margin-top:5px;
+	margin-right:2%;
+	padding:0;
+	background-color:#000000;
+	margin-left:0px;
+}
+.page-upcoming-events {
+	font-size:80%;
+}
+.page-todays-events {
+	font-size:80%;
+}
+.calendar-table table, .calendar-table tbody, .calendar-table tr, .calendar-table td {
+	margin:0 !important;
+	padding:0 !important;
+}
+table.calendar-table {
+	margin-bottom:5px !important;
+}
+.cat-key {
+	width:100%;
+	margin-top:30px;
+	padding:5px;
+	border:0 !important;
+}
+.cal-separate {
+	border:0 !important;
+	margin-top:10px;
+}
+table.cat-key {
+	margin-top:5px !important;
+	border:1px solid #DFE6DE !important;
+	border-collapse:separate !important;
+	border-spacing:4px !important;
+	margin-left:2px !important;
+	width:99.5% !important;
+	margin-bottom:5px !important;
+}
+.cat-key td {
+	border:0 !important;
+}
