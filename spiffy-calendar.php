@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.stofko.ca
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.1.5
+Version: 1.1.6
 Author: Bev Stofko
 
 Credits:
@@ -2280,7 +2280,7 @@ ORDER BY event_id";
 		return $calendar_body;
 	}
 
-	// Used to create a hover will all a day's events in for minical
+	// Used to create a hover with all a day's events for minical
 	function minical_draw_events($events,$day_of_week = '')
 	{
 		// We need to sort arrays of objects by time
@@ -2294,7 +2294,7 @@ ORDER BY event_id";
 			foreach($events as $event) {
 				if ($event->event_time == '00:00:00') { 
 					$the_time = 'all day'; 
-				} else if ($event->event_end_ == '00:00:00') { 
+				} else if ($event->event_end_time == '00:00:00') { 
 					$the_time = 'at ' . date(get_option('time_format'), strtotime($event->event_time)); 
 				} else {
 					$the_time = 'from ' . date(get_option('time_format'), strtotime($event->event_time)); 
