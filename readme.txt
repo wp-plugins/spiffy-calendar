@@ -1,9 +1,8 @@
 === Spiffy Calendar ===
-Author: Bev Stofko
 Contributors: BStofko
 Donate link: http://stofko.ca/spiffy-calendar
 Requires at least: 3.4
-Tested up to: 3.5.1
+Tested up to: 3.8
 Stable tag: 1.1.6
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
@@ -13,6 +12,8 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 == Description ==
 
 A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage and display your events and appointments.
+
+> The development version contains a Spanish translation. If you are interested in a Spanish translation please try out the development version and let us know of any errors in translation.
 
 [Demo](http://stofko.ca/spiffy-calendar/)
 
@@ -52,6 +53,10 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 	* Categories system can be switched on or off
 	* Pop up javascript calendars help the choosing of dates
 	* Events can be links pointing to a location of your choice
+	
+= Languages =
+
+* Spanish (Courtesy of Andrew Kurtis, WebHostingHub)
 
 == Installation ==
 
@@ -96,6 +101,11 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 4. Event manager
 
 == Changelog ==
+
+= Version 1.1.7 =
+
+* Add language support
+* Spanish translation (Courtesy of Andrew Kurtis, WebHostingHub)
 
 = Version 1.1.6 July 18, 2013 =
 
