@@ -13,8 +13,6 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage and display your events and appointments.
 
-> The development version contains a Spanish translation. If you are interested in a Spanish translation please try out the development version and let us know of any errors in translation.
-
 [Demo](http://stofko.ca/spiffy-calendar/)
 
 = Features =
