@@ -1,9 +1,9 @@
 === Spiffy Calendar ===
-Contributors: BStofko
-Donate link: http://stofko.ca/spiffy-calendar
+Contributors: SunnyThemes
+Donate link: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Requires at least: 3.4
 Tested up to: 3.8
-Stable tag: 1.1.7
+Stable tag:trunk
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -13,7 +13,7 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage and display your events and appointments.
 
-[Demo](http://stofko.ca/spiffy-calendar/)
+[Demo](http://www.sunnythemes.com/plugins/spiffy-calendar/)
 
 = Features =
 
@@ -99,6 +99,11 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 4. Event manager
 
 == Changelog ==
+
+= Version 1.1.8 =
+
+* CSS improvements. The default CSS has been updated to work better with most themes.
+* Additional language strings
 
 = Version 1.1.7 =
 

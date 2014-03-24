@@ -1,16 +1,16 @@
 <?php
 /*
 Plugin Name: Spiffy Calendar
-Plugin URI: http://www.stofko.ca
+Plugin URI: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.1.7
-Author: Bev Stofko
+Version: 1.1.8
+Author: Sunny Themes
 
 Credits:
 - Derived from Calendar plugin version 1.3.1 by Kieran O'Shea http://www.kieranoshea.com
 */
 
-/* Copyright 2012 Bev Stofko (email : bev@stofko.ca)
+/* Copyright 2014 Sunny Themes
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -2299,12 +2299,12 @@ ORDER BY event_id";
 			// Now process the events
 			foreach($events as $event) {
 				if ($event->event_time == '00:00:00') { 
-					$the_time = 'all day'; 
+					$the_time = __('all day', 'spiffy-calendar'); 
 				} else if ($event->event_end_time == '00:00:00') { 
-					$the_time = 'at ' . date(get_option('time_format'), strtotime($event->event_time)); 
+					$the_time = __('at ', 'spiffy-calendar') . date(get_option('time_format'), strtotime($event->event_time)); 
 				} else {
-					$the_time = 'from ' . date(get_option('time_format'), strtotime($event->event_time)); 
-					$the_time .= ' to ' . date(get_option('time_format'), strtotime($event->event_end_time));
+					$the_time = __('from ', 'spiffy-calendar') . date(get_option('time_format'), strtotime($event->event_time)); 
+					$the_time .= __(' to ', 'spiffy-calendar') . date(get_option('time_format'), strtotime($event->event_end_time));
 				} 
 				$output .= '<strong>'.$event->event_title.'</strong> '.$the_time.'<br />';
 			}

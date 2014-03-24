@@ -27,13 +27,16 @@
 	color:#333333; 
 	background:#F6F79B; 
 	display:block;
-	position:absolute; 
+	/*position:absolute; */
 	margin-top:1px; 
 	padding:5px; 
 	width:150px; 
 	z-index:100;
 	line-height:1.2em;
 	box-shadow:2px 2px 2px #c0c0c0;
+}
+.calnk a:hover div.popup {
+	position:absolute;
 }
 .calnk a:hover div div {
 	box-shadow:none;
