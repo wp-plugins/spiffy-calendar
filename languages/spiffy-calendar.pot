@@ -1,0 +1,609 @@
+# Copyright (C) 2013 Spiffy Calendar
+# This file is distributed under the same license as the Spiffy Calendar package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Spiffy Calendar 1.1.6\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/spiffy-calendar\n"
+"POT-Creation-Date: 2013-12-03 15:21:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. #-#-#-#-#  plugin.pot (Spiffy Calendar 1.1.6)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: spiffy-calendar.php:206
+msgid "Spiffy Calendar"
+msgstr ""
+
+#: spiffy-calendar.php:210 spiffy-calendar.php:211 spiffy-calendar.php:969
+msgid "Manage Events"
+msgstr ""
+
+#: spiffy-calendar.php:215 spiffy-calendar.php:1397
+msgid "Manage Categories"
+msgstr ""
+
+#: spiffy-calendar.php:217
+msgid "Calendar Config"
+msgstr ""
+
+#: spiffy-calendar.php:218
+msgid "Calendar Options"
+msgstr ""
+
+#: spiffy-calendar.php:346 spiffy-calendar.php:1408
+msgid "ID"
+msgstr ""
+
+#: spiffy-calendar.php:347 spiffy-calendar.php:1675 spiffy-calendar.php:1719
+#: spiffy-calendar.php:1762
+msgid "Title"
+msgstr ""
+
+#: spiffy-calendar.php:348 spiffy-calendar.php:506
+msgid "Start Date"
+msgstr ""
+
+#: spiffy-calendar.php:349 spiffy-calendar.php:535
+msgid "End Date"
+msgstr ""
+
+#: spiffy-calendar.php:350
+msgid "Start Time"
+msgstr ""
+
+#: spiffy-calendar.php:351
+msgid "End Time"
+msgstr ""
+
+#: spiffy-calendar.php:352
+msgid "Recurs"
+msgstr ""
+
+#: spiffy-calendar.php:353
+msgid "Repeats"
+msgstr ""
+
+#: spiffy-calendar.php:354 spiffy-calendar.php:605
+msgid "Image"
+msgstr ""
+
+#: spiffy-calendar.php:355 spiffy-calendar.php:1178
+msgid "Author"
+msgstr ""
+
+#: spiffy-calendar.php:356
+msgid "Category"
+msgstr ""
+
+#: spiffy-calendar.php:357 spiffy-calendar.php:407 spiffy-calendar.php:1411
+#: spiffy-calendar.php:1424
+msgid "Edit"
+msgstr ""
+
+#: spiffy-calendar.php:358 spiffy-calendar.php:413 spiffy-calendar.php:1412
+#: spiffy-calendar.php:1435
+msgid "Delete"
+msgstr ""
+
+#: spiffy-calendar.php:371 spiffy-calendar.php:372 spiffy-calendar.php:386
+#: spiffy-calendar.php:1427
+msgid "N/A"
+msgstr ""
+
+#: spiffy-calendar.php:376
+msgid "Never"
+msgstr ""
+
+#: spiffy-calendar.php:377
+msgid "Weekly"
+msgstr ""
+
+#: spiffy-calendar.php:378
+msgid "Monthly (date)"
+msgstr ""
+
+#: spiffy-calendar.php:379
+msgid "Monthly (day)"
+msgstr ""
+
+#: spiffy-calendar.php:380
+msgid "Yearly"
+msgstr ""
+
+#: spiffy-calendar.php:387
+msgid "Forever"
+msgstr ""
+
+#: spiffy-calendar.php:388
+msgid "Times"
+msgstr ""
+
+#: spiffy-calendar.php:413
+msgid "Are you sure you want to delete the event titled &quot;"
+msgstr ""
+
+#: spiffy-calendar.php:424
+msgid "<p>There are no events in the database!</p>"
+msgstr ""
+
+#: spiffy-calendar.php:437
+msgid "Bad event ID"
+msgstr ""
+
+#: spiffy-calendar.php:443
+msgid "An event with that ID couldn't be found"
+msgstr ""
+
+#: spiffy-calendar.php:469
+msgid "Event Title"
+msgstr ""
+
+#: spiffy-calendar.php:474
+msgid "Event Description"
+msgstr ""
+
+#: spiffy-calendar.php:480
+msgid "Event Category"
+msgstr ""
+
+#: spiffy-calendar.php:502
+msgid "Event Link (Optional)"
+msgstr ""
+
+#: spiffy-calendar.php:519
+msgid "Start Time (hh:mm)"
+msgstr ""
+
+#: spiffy-calendar.php:531 spiffy-calendar.php:557
+msgid "Optional, set blank if not required."
+msgstr ""
+
+#: spiffy-calendar.php:547
+msgid "End Time (hh:mm)"
+msgstr ""
+
+#: spiffy-calendar.php:561
+msgid "Recurring Events"
+msgstr ""
+
+#: spiffy-calendar.php:591
+msgid "Repeats for"
+msgstr ""
+
+#: spiffy-calendar.php:595
+msgid "None"
+msgstr ""
+
+#: spiffy-calendar.php:596
+msgid "Weeks"
+msgstr ""
+
+#: spiffy-calendar.php:597
+msgid "Months (date)"
+msgstr ""
+
+#: spiffy-calendar.php:598
+msgid "Months (day)"
+msgstr ""
+
+#: spiffy-calendar.php:599
+msgid "Years"
+msgstr ""
+
+#: spiffy-calendar.php:601
+msgid ""
+"Entering 0 means forever. Where the recurrance interval is left at none, the "
+"event will not reoccur."
+msgstr ""
+
+#: spiffy-calendar.php:625 spiffy-calendar.php:1252 spiffy-calendar.php:1344
+#: spiffy-calendar.php:1395
+msgid "Save"
+msgstr ""
+
+#: spiffy-calendar.php:688
+msgid "Failure"
+msgstr ""
+
+#: spiffy-calendar.php:688
+msgid "You can't update an event if you haven't submitted an event id"
+msgstr ""
+
+#: spiffy-calendar.php:723 spiffy-calendar.php:730 spiffy-calendar.php:737
+#: spiffy-calendar.php:751 spiffy-calendar.php:765 spiffy-calendar.php:776
+#: spiffy-calendar.php:786 spiffy-calendar.php:797 spiffy-calendar.php:870
+#: spiffy-calendar.php:876 spiffy-calendar.php:918 spiffy-calendar.php:943
+msgid "Error"
+msgstr ""
+
+#: spiffy-calendar.php:723
+msgid ""
+"Your event end date must be either after or the same as your event begin date"
+msgstr ""
+
+#: spiffy-calendar.php:730
+msgid ""
+"Your date formatting is correct but one or more of your dates is invalid. "
+"Check for number of days in month and leap year related errors."
+msgstr ""
+
+#: spiffy-calendar.php:737
+msgid ""
+"Both start and end dates must be entered and be in the format YYYY-MM-DD"
+msgstr ""
+
+#: spiffy-calendar.php:751
+msgid ""
+"The time field must either be blank or be entered in the format hh:mm am/pm"
+msgstr ""
+
+#: spiffy-calendar.php:765
+msgid ""
+"The end time field must either be blank or be entered in the format hh:mm am/"
+"pm"
+msgstr ""
+
+#: spiffy-calendar.php:776
+msgid ""
+"The URL entered must either be prefixed with http:// or be completely blank"
+msgstr ""
+
+#: spiffy-calendar.php:786
+msgid "The event title must be between 1 and 30 characters in length"
+msgstr ""
+
+#: spiffy-calendar.php:797
+msgid ""
+"The repetition value must be 0 unless a type of recurrance is selected in "
+"which case the repetition value must be 0 or higher"
+msgstr ""
+
+#: spiffy-calendar.php:870
+msgid ""
+"The event could not be added to the database. This may indicate a problem "
+"with your database or the way in which it is configured."
+msgstr ""
+
+#: spiffy-calendar.php:876
+msgid ""
+"The event could not be updated. This may indicate a problem with your "
+"database or the way in which it is configured."
+msgstr ""
+
+#: spiffy-calendar.php:883
+msgid "Event added. It will now show in your calendar."
+msgstr ""
+
+#: spiffy-calendar.php:889
+msgid "Event updated successfully."
+msgstr ""
+
+#: spiffy-calendar.php:918
+msgid "You can't delete an event if you haven't submitted an event id"
+msgstr ""
+
+#: spiffy-calendar.php:939
+msgid "Event deleted successfully"
+msgstr ""
+
+#: spiffy-calendar.php:943
+msgid ""
+"Despite issuing a request to delete, the event still remains in the "
+"database. Please investigate."
+msgstr ""
+
+#: spiffy-calendar.php:957
+msgid "Edit Event"
+msgstr ""
+
+#: spiffy-calendar.php:960
+msgid "You must provide an event id in order to edit it"
+msgstr ""
+
+#: spiffy-calendar.php:966
+msgid "Add Event"
+msgstr ""
+
+#: spiffy-calendar.php:1056
+msgid "Settings saved"
+msgstr ""
+
+#: spiffy-calendar.php:1166
+msgid "Spiffy Calendar Options"
+msgstr ""
+
+#: spiffy-calendar.php:1174
+msgid "Choose the lowest user group that may manage events"
+msgstr ""
+
+#: spiffy-calendar.php:1176
+msgid "Subscriber"
+msgstr ""
+
+#: spiffy-calendar.php:1177
+msgid "Contributor"
+msgstr ""
+
+#: spiffy-calendar.php:1179
+msgid "Editor"
+msgstr ""
+
+#: spiffy-calendar.php:1180
+msgid "Administrator"
+msgstr ""
+
+#: spiffy-calendar.php:1185
+msgid "Do you want to display the author name on events?"
+msgstr ""
+
+#: spiffy-calendar.php:1187 spiffy-calendar.php:1195 spiffy-calendar.php:1205
+#: spiffy-calendar.php:1213 spiffy-calendar.php:1221 spiffy-calendar.php:1230
+#: spiffy-calendar.php:1238
+msgid "Yes"
+msgstr ""
+
+#: spiffy-calendar.php:1188 spiffy-calendar.php:1196 spiffy-calendar.php:1206
+#: spiffy-calendar.php:1214 spiffy-calendar.php:1222 spiffy-calendar.php:1231
+#: spiffy-calendar.php:1239
+msgid "No"
+msgstr ""
+
+#: spiffy-calendar.php:1193
+msgid "Do you want to enable detailed event display?"
+msgstr ""
+
+#: spiffy-calendar.php:1199
+msgid ""
+"When this option is enabled the time and image will be listed with the event "
+"title. Note that time and image are always displayed in the popup window."
+msgstr ""
+
+#: spiffy-calendar.php:1203
+msgid "Display a jumpbox for changing month and year quickly?"
+msgstr ""
+
+#: spiffy-calendar.php:1211
+msgid "Display todays events?"
+msgstr ""
+
+#: spiffy-calendar.php:1219
+msgid "Display upcoming events?"
+msgstr ""
+
+#: spiffy-calendar.php:1224
+msgid "for"
+msgstr ""
+
+#: spiffy-calendar.php:1224
+msgid "days into the future"
+msgstr ""
+
+#: spiffy-calendar.php:1228
+msgid "Enable event categories?"
+msgstr ""
+
+#: spiffy-calendar.php:1236
+msgid "Open event links in new window?"
+msgstr ""
+
+#: spiffy-calendar.php:1244
+msgid "Configure the stylesheet for Calendar"
+msgstr ""
+
+#: spiffy-calendar.php:1246
+msgid "Tick this box if you wish to reset the Calendar style to default"
+msgstr ""
+
+#: spiffy-calendar.php:1305
+msgid "Category added successfully"
+msgstr ""
+
+#: spiffy-calendar.php:1316
+msgid "Category deleted successfully"
+msgstr ""
+
+#: spiffy-calendar.php:1324
+msgid "Edit Category"
+msgstr ""
+
+#: spiffy-calendar.php:1333 spiffy-calendar.php:1384 spiffy-calendar.php:1409
+msgid "Category Name"
+msgstr ""
+
+#: spiffy-calendar.php:1337 spiffy-calendar.php:1388
+msgid "Category Colour (Hex format)"
+msgstr ""
+
+#: spiffy-calendar.php:1356
+msgid "Category edited successfully"
+msgstr ""
+
+#: spiffy-calendar.php:1375
+msgid "Add Category"
+msgstr ""
+
+#: spiffy-calendar.php:1410
+msgid "Category Colour"
+msgstr ""
+
+#: spiffy-calendar.php:1435
+msgid "Are you sure you want to delete the category named &quot;"
+msgstr ""
+
+#: spiffy-calendar.php:1448
+msgid "There are no categories in the database - something has gone wrong!"
+msgstr ""
+
+#: spiffy-calendar.php:1520 spiffy-calendar.php:1525
+msgid "Next"
+msgstr ""
+
+#: spiffy-calendar.php:1537 spiffy-calendar.php:1542
+msgid "Prev"
+msgstr ""
+
+#: spiffy-calendar.php:1645
+msgid "Mini Calendar"
+msgstr ""
+
+#: spiffy-calendar.php:1656
+msgid "Calendar"
+msgstr ""
+
+#: spiffy-calendar.php:1677 spiffy-calendar.php:1721 spiffy-calendar.php:1764
+msgid "Comma separated category id list"
+msgstr ""
+
+#: spiffy-calendar.php:1690 spiffy-calendar.php:1700
+msgid "Today's Events"
+msgstr ""
+
+#: spiffy-calendar.php:1733 spiffy-calendar.php:1743
+msgid "Upcoming Events"
+msgstr ""
+
+#: spiffy-calendar.php:1813
+msgid "Time"
+msgstr ""
+
+#: spiffy-calendar.php:1825
+msgid "Posted by"
+msgstr ""
+
+#: spiffy-calendar.php:2061 spiffy-calendar.php:2068
+msgid "Sunday"
+msgstr ""
+
+#: spiffy-calendar.php:2062 spiffy-calendar.php:2066
+msgid "Monday"
+msgstr ""
+
+#: spiffy-calendar.php:2062 spiffy-calendar.php:2067
+msgid "Tuesday"
+msgstr ""
+
+#: spiffy-calendar.php:2062 spiffy-calendar.php:2067
+msgid "Wednesday"
+msgstr ""
+
+#: spiffy-calendar.php:2063 spiffy-calendar.php:2067
+msgid "Thursday"
+msgstr ""
+
+#: spiffy-calendar.php:2063 spiffy-calendar.php:2068
+msgid "Friday"
+msgstr ""
+
+#: spiffy-calendar.php:2063 spiffy-calendar.php:2068
+msgid "Saturday"
+msgstr ""
+
+#: spiffy-calendar.php:2072 spiffy-calendar.php:2162 spiffy-calendar.php:2327
+msgid "January"
+msgstr ""
+
+#: spiffy-calendar.php:2072 spiffy-calendar.php:2163 spiffy-calendar.php:2327
+msgid "February"
+msgstr ""
+
+#: spiffy-calendar.php:2072 spiffy-calendar.php:2164 spiffy-calendar.php:2327
+msgid "March"
+msgstr ""
+
+#: spiffy-calendar.php:2073 spiffy-calendar.php:2165 spiffy-calendar.php:2328
+msgid "April"
+msgstr ""
+
+#: spiffy-calendar.php:2073 spiffy-calendar.php:2166 spiffy-calendar.php:2328
+msgid "May"
+msgstr ""
+
+#: spiffy-calendar.php:2073 spiffy-calendar.php:2167 spiffy-calendar.php:2328
+msgid "June"
+msgstr ""
+
+#: spiffy-calendar.php:2073 spiffy-calendar.php:2168 spiffy-calendar.php:2329
+msgid "July"
+msgstr ""
+
+#: spiffy-calendar.php:2074 spiffy-calendar.php:2169 spiffy-calendar.php:2329
+msgid "August"
+msgstr ""
+
+#: spiffy-calendar.php:2074 spiffy-calendar.php:2170 spiffy-calendar.php:2329
+msgid "September"
+msgstr ""
+
+#: spiffy-calendar.php:2074 spiffy-calendar.php:2171 spiffy-calendar.php:2330
+msgid "October"
+msgstr ""
+
+#: spiffy-calendar.php:2075 spiffy-calendar.php:2172 spiffy-calendar.php:2330
+msgid "November"
+msgstr ""
+
+#: spiffy-calendar.php:2075 spiffy-calendar.php:2173 spiffy-calendar.php:2330
+msgid "December"
+msgstr ""
+
+#: spiffy-calendar.php:2161
+msgid "Month"
+msgstr ""
+
+#: spiffy-calendar.php:2175
+msgid "Year"
+msgstr ""
+
+#: spiffy-calendar.php:2202
+msgid "Go"
+msgstr ""
+
+#: spiffy-calendar.php:2270
+msgid "Category Key"
+msgstr ""
+
+#: spiffy-calendar.php:2319 spiffy-calendar.php:2323
+msgid "Su"
+msgstr ""
+
+#: spiffy-calendar.php:2319 spiffy-calendar.php:2322
+msgid "Mo"
+msgstr ""
+
+#: spiffy-calendar.php:2319 spiffy-calendar.php:2322
+msgid "Tu"
+msgstr ""
+
+#: spiffy-calendar.php:2320 spiffy-calendar.php:2322
+msgid "We"
+msgstr ""
+
+#: spiffy-calendar.php:2320 spiffy-calendar.php:2323
+msgid "Th"
+msgstr ""
+
+#: spiffy-calendar.php:2320 spiffy-calendar.php:2323
+msgid "Fr"
+msgstr ""
+
+#: spiffy-calendar.php:2320 spiffy-calendar.php:2323
+msgid "Sa"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.stofko.ca"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin allows you to display a calendar of all your events and "
+"appointments as a page on your site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bev Stofko"
+msgstr ""
