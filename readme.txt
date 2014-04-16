@@ -2,7 +2,7 @@
 Contributors: SunnyThemes
 Donate link: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Requires at least: 3.4
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag:trunk
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
