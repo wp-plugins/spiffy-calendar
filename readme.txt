@@ -44,6 +44,11 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 	* Events can repeat on a weekly, monthly (set numerical day), monthly (set textual day) or yearly basis
 	* Repeats can occur indefinitely or a limited number of times
 	* Events can span more than one day
+*	Hide all events for specific days:
+	* Hide repeating event for a single day such as a holiday
+	* Hide full days of events that span more than one day
+	* Substitute new title to replace hidden events
+	* Select override based on category
 *	Easy to use events manager in admin dashboard
 	* Comprehensive options panel for admin
 	* Optional drop down boxes to quickly change month and year
@@ -99,6 +104,10 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 4. Event manager
 
 == Changelog ==
+
+= Version 1.2.0 =
+
+* Override selected parts of recurring event without changing original event definition, courtesy of Douglas Forester.
 
 = Version 1.1.8 =
 

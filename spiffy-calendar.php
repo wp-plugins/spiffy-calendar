@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.1.8
+Version: 1.2.0
 Author: Sunny Themes
 
 Credits:
@@ -83,8 +83,13 @@ Class Spiffy_Calendar
 		$wp_spiffycal_exists = false;
 
 		// Determine if the calendar exists
-		if( mysql_num_rows( mysql_query("SHOW TABLES LIKE '".WP_SPIFFYCAL_TABLE."'"))) {
-			$new_install = false;
+		//if( mysql_num_rows( mysql_query("SHOW TABLES LIKE '".WP_SPIFFYCAL_TABLE."'"))) {
+		//	$new_install = false;
+		//}
+		$sql = "SHOW TABLES LIKE '" . WP_SPIFFYCAL_TABLE . "'";
+		$ans =  $wpdb->get_results($sql);
+		if (count($ans) > 0) {
+			$new_install = false;  // event table already exists. assume other tables does too.
 		}
 
 		// Now we've determined what the current install is or isn't 
@@ -100,6 +105,8 @@ Class Spiffy_Calendar
 				event_end_time TIME ,
 				event_recur CHAR(1) ,
 				event_repeats INT(3) ,
+				event_hide_events CHAR(1) DEFAULT 'F',
+				event_show_title CHAR(1) DEFAULT 'F',
 				event_author BIGINT(20) UNSIGNED ,
 				event_category BIGINT(20) UNSIGNED NOT NULL DEFAULT 1 ,
 				event_link TEXT ,
@@ -116,11 +123,31 @@ Class Spiffy_Calendar
 			 )";
 			$wpdb->get_results($sql);
 
-			$sql = "INSERT INTO " . WP_SPIFFYCAL_CATEGORIES_TABLE . " SET category_id=1, category_name='General', category_colour='#000000'";
+			$sql = "INSERT INTO " . WP_SPIFFYCAL_CATEGORIES_TABLE .
+				" SET category_id=1, category_name='General', category_colour='#000000'";
 			$wpdb->get_results($sql);
 
 			$this->default_styles();
-		} 
+		} else {
+			// already have databases. check whether the "new" columns are in the event table
+			$sql = "select column_name from information_schema.columns
+					where
+						(table_name = '" . WP_SPIFFYCAL_TABLE . "') and
+						(column_name = 'event_hide_events')
+					order by ordinal_position";
+			$columns = $wpdb->get_results($sql);
+			if (count($columns) == 0) {
+				// Old version of the database found. Add two new columns.
+				$sql = "ALTER TABLE " .
+					WP_SPIFFYCAL_TABLE .
+					" ADD COLUMN event_hide_events CHAR(1) NOT NULL DEFAULT 'F'";
+				$wpdb->get_results($sql);
+				$sql = "ALTER TABLE " .
+					WP_SPIFFYCAL_TABLE .
+					" ADD COLUMN event_show_title CHAR(1) NOT NULL DEFAULT 'F'";
+				$wpdb->get_results($sql);
+			}
+		}
 	}
 	
 	function calendar_init_action() {
@@ -357,6 +384,8 @@ function toggleVisibility(id) {
 	<th class="manage-column" scope="col"><?php _e('End Time','spiffy-calendar') ?></th>
 	<th class="manage-column" scope="col"><?php _e('Recurs','spiffy-calendar') ?></th>
 	<th class="manage-column" scope="col"><?php _e('Repeats','spiffy-calendar') ?></th>
+	<th class="manage-column" scope="col"><?php _e('Hide Events','spiffy-calendar') ?></th>
+	<th class="manage-column" scope="col"><?php _e('Show Title','spiffy-calendar') ?></th>
 	<th class="manage-column" scope="col"><?php _e('Image','spiffy-calendar') ?></th>
 	<th class="manage-column" scope="col"><?php _e('Author','spiffy-calendar') ?></th>
 	<th class="manage-column" scope="col"><?php _e('Category','spiffy-calendar') ?></th>
@@ -394,6 +423,23 @@ function toggleVisibility(id) {
 			else if ($event->event_repeats > 0) { echo $event->event_repeats.' '.__('Times','spiffy-calendar'); }
 			?>
 	</td>
+    <td>
+			<?php
+			// interpret the hide_events value
+			if ($event->event_hide_events == 'F') { echo 'False'; }
+			else if ($event->event_hide_events == 'T') { echo 'True'; }
+			 ?>
+    </td>
+    <td>
+			<?php
+			// interpret the show_title value
+			if ($event->event_hide_events == 'F') { echo 'N/A'; }
+			else {      // hide_event event
+				if ($event->event_show_title == 'F') { echo 'False'; }
+				else if ($event->event_show_title == 'T') { echo 'True'; }
+			}
+			 ?>
+    </td>
 	<td>
 			<?php
 			if ($event->event_image > 0) {
@@ -534,7 +580,7 @@ function toggleVisibility(id) {
 					} else {
 						//echo date("a:i a",$this->ctwo()); //defaulting to current time is not helpful
 					}
-					?>" /> <?php _e('Optional, set blank if not required.','spiffy-calendar'); ?>
+					?>" /> <?php _e('Optional, set blank if not required. Ignored for "Hide Events".','spiffy-calendar'); ?>
 				</td>
 				</tr>
 				<tr>
@@ -560,7 +606,7 @@ function toggleVisibility(id) {
 							echo date("h:i a",strtotime($data->event_end_time));
 						}
 					} 
-					?>" /> <?php _e('Optional, set blank if not required.','spiffy-calendar'); ?>
+					?>" /> <?php _e('Optional, set blank if not required. Ignored for "Hide Events".','spiffy-calendar'); ?>
 				</td>
 				</tr>
 				<tr>
@@ -594,6 +640,45 @@ function toggleVisibility(id) {
 							$selected_u = 'selected="selected"';
 						}
 					}
+
+					if (isset($data)) {
+						if ($data->event_hide_events != NULL) {
+							$hide_events = $data->event_hide_events;
+						} else {
+							$hide_events = 'F';
+						}
+					} else {
+						$hide_events = 'F';
+					}
+
+					$selected_he_t = '';
+					$selected_he_f = '';
+					if (isset($data)) {
+						if ($data->event_hide_events == 'T') {
+							$selected_he_t = 'selected="selected"';
+						} else if ($data->event_hide_events == 'F') {
+							$selected_he_f = 'selected="selected"';
+						}
+					}
+					if (isset($data)) {
+						if ($data->event_show_title != NULL) {
+							$show_title = $data->event_show_title;
+						} else {
+							$show_title = 'F';
+						}
+					} else {
+						$show_title = 'F';
+					}
+
+					$selected_st_t = '';
+					$selected_st_f = '';
+					if (isset($data)) {
+						if ($data->event_show_title == 'T') {
+							$selected_st_t = 'selected="selected"';
+						} else if ($data->event_show_title == 'F') {
+							$selected_st_f = 'selected="selected"';
+						}
+					}
 					_e('Repeats for','spiffy-calendar'); 
 					?> 
 					<input type="text" name="event_repeats" class="input" size="1" value="<?php echo $repeats; ?>" /> 
@@ -604,11 +689,30 @@ function toggleVisibility(id) {
 						<option class="input" <?php echo $selected_u; ?> value="U"><?php _e('Months (day)') ?></option>
 						<option class="input" <?php echo $selected_y; ?> value="Y"><?php _e('Years') ?></option>
 					</select><br />
-					<?php _e('Entering 0 means forever. Where the recurrance interval is left at none, the event will not reoccur.','spiffy-calendar'); ?>
+					<?php _e('Entering 0 means forever. Where the recurrance interval is left at none, the event will not recur.','spiffy-calendar'); ?><br />
 				</td>
 				</tr>
 				<tr>
-				<td><legend><?php _e('Image','spiffy-calendar'); ?></legend></td>
+				<td style="vertical-align:top;"><legend><?php _e('Hide Events','spiffy-calendar'); ?></legend></td>
+				<td>
+                <select name="event_hide_events" class="input">
+						<option class="input" <?php echo $selected_he_f; ?> value='F'><?php _e('False') ?></option>
+						<option class="input" <?php echo $selected_he_t; ?> value='T'><?php _e('True') ?></option>
+					</select><br />
+					<?php _e('Entering True means other events of this category will be hidden for the specifed day(s).','spiffy-calendar'); ?>
+                </td>
+                </tr>
+                <tr>
+				<td style="vertical-align:top;"><legend><?php _e('','spiffy-calendar'); ?></legend></td>
+                <td><?php _e('Show Title','spiffy-calendar'); ?>&nbsp;
+                <select name="event_show_title" class="input">
+						<option class="input" <?php echo $selected_st_f; ?> value='F'><?php _e('False') ?></option>
+						<option class="input" <?php echo $selected_st_t; ?> value='T'><?php _e('True') ?></option>
+					</select>&nbsp;
+					<?php _e('Entering True means the title of this event will be displayed. This is only used if Hide Events is True.','spiffy-calendar'); ?>
+               	</td>
+                </tr>
+                <td><legend><?php _e('Image','spiffy-calendar'); ?></legend></td>
 				<td>
 					<input type="file" name="image_upload" size="80" class="input" />
 					<?php
@@ -683,6 +787,8 @@ function toggleVisibility(id) {
 	$end_time = !empty($_REQUEST['event_end_time']) ? trim($_REQUEST['event_end_time']) : '';
 	$recur = !empty($_REQUEST['event_recur']) ? $_REQUEST['event_recur'] : '';
 	$repeats = !empty($_REQUEST['event_repeats']) ? $_REQUEST['event_repeats'] : '';
+	$hide_events = !empty($_REQUEST['event_hide_events']) ? $_REQUEST['event_hide_events'] : '';
+	$show_title = !empty($_REQUEST['event_show_title']) ? $_REQUEST['event_show_title'] : '';
 	$event_image = !empty($_REQUEST['event_image']) ? $_REQUEST['event_image'] : '';
 	$category = !empty($_REQUEST['event_category']) ? $_REQUEST['event_category'] : '';
 	$linky = !empty($_REQUEST['event_link']) ? $_REQUEST['event_link'] : '';
@@ -804,7 +910,6 @@ function toggleVisibility(id) {
 
 			<?php
 		}
-
 		// Check for image upload
 		foreach ( $_FILES as $image ) {
 			// if a file was uploaded
@@ -857,6 +962,8 @@ function toggleVisibility(id) {
 					'event_end_time' => $end_time, 
 					'event_recur' => $recur, 
 					'event_repeats' => $repeats, 
+					'event_hide_events' => $hide_events,
+					'event_show_title' => $show_title,
 					'event_image' => $event_image, 
 					'event_author' => $current_user->ID, 
 					'event_category' => $category,
@@ -907,6 +1014,8 @@ function toggleVisibility(id) {
 			$users_entries->event_end_time = $end_time;
 			$users_entries->event_recur = $recur;
 			$users_entries->event_repeats = $repeats;
+			$users_entries->event_hide_events = $hide_events;
+			$users_entries->event_show_title = $show_title;
 			$users_entries->event_image = $event_image;
 			$users_entries->event_category = $category;
 			$users_entries->event_link = $linky;
@@ -1871,8 +1980,6 @@ function toggleVisibility(id) {
 	{
 		global $wpdb;
 
-		$arr_events = array();
-
 		// Get the date format right
 		$date = $y . '-' . $m . '-' . $d;
 
@@ -1900,6 +2007,7 @@ UNION ALL
 SELECT i.*,'Weekly' AS type FROM " . WP_SPIFFYCAL_TABLE . " AS i WHERE i.event_recur = 'W' AND '$date' >= i.event_begin AND i.event_repeats != 0 AND (i.event_repeats*7) >= (TO_DAYS('$date') - TO_DAYS(i.event_end)) ".$cat_sql." 
 ORDER BY event_id";
 
+		$arr_events = array();
 		// Run the collated code
 		$events =$wpdb->get_results($sql);
 		if (!empty($events)) {
@@ -2023,8 +2131,49 @@ ORDER BY event_id";
  				}
 			 }
 		}
-
-		return $arr_events;
+		// count the number of hide events
+		$hide_event_count = 0;
+		foreach($arr_events as $arr_event) {
+			if ($arr_event->event_hide_events == 'T') { $hide_event_count++; }
+		}
+		if ($hide_event_count) { // hide_events event found for this date.
+			// separate "hide events" from normal events
+			$hide_events = array();
+			$normal_events = array();
+			foreach($arr_events as $arr_event) {
+				if ($arr_event->event_hide_events == 'T') {
+					array_push($hide_events, $arr_event);
+				} else {
+					array_push($normal_events, $arr_event);
+				}
+			}
+			// use the show_title flag in the array (not the database) to
+			// select which events to show after filtering on hide_events
+			foreach($normal_events as $normal_event) {
+				$normal_event->event_show_title = 'T';   // initialize
+			}
+			foreach($normal_events as $normal_event) {
+				foreach($hide_events as $hide_event) {
+					if ($normal_event->event_category == $hide_event->event_category) {
+						// normal event has same category as hide_event: don't show it
+						$normal_event->event_show_title = 'F';
+						break;   // break out of inner loop
+					}
+				}
+			}
+			// create a new array of events to display
+			$shown_events = array();
+			// show hidden events first on calendar
+			foreach($hide_events as $hide_event) {
+				if ($hide_event->event_show_title == 'T') {array_push($shown_events, $hide_event);}
+			}
+			// then show normal events
+			foreach($normal_events as $normal_event) {
+				if ($normal_event->event_show_title == 'T') {array_push($shown_events, $normal_event);}
+			}
+			return $shown_events;			
+		}
+		else { return $arr_events; }
 	}
 
 	// Setup comparison functions for building the calendar later
