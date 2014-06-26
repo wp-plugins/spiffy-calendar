@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Spiffy Calendar package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spiffy Calendar 1.2.0\n"
+"Project-Id-Version: Spiffy Calendar 1.2.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/spiffy-calendar\n"
-"POT-Creation-Date: 2014-06-26 13:25:30+00:00\n"
+"POT-Creation-Date: 2014-06-26 18:02:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#. #-#-#-#-#  plugin.pot (Spiffy Calendar 1.2.0)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (Spiffy Calendar 1.2.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: spiffy-calendar.php:239
 msgid "Spiffy Calendar"
@@ -98,7 +98,7 @@ msgid "Delete"
 msgstr ""
 
 #: spiffy-calendar.php:406 spiffy-calendar.php:407 spiffy-calendar.php:421
-#: spiffy-calendar.php:1542
+#: spiffy-calendar.php:436 spiffy-calendar.php:1542
 msgid "N/A"
 msgstr ""
 
@@ -128,6 +128,16 @@ msgstr ""
 
 #: spiffy-calendar.php:423
 msgid "Times"
+msgstr ""
+
+#: spiffy-calendar.php:429 spiffy-calendar.php:438 spiffy-calendar.php:699
+#: spiffy-calendar.php:709
+msgid "False"
+msgstr ""
+
+#: spiffy-calendar.php:430 spiffy-calendar.php:439 spiffy-calendar.php:700
+#: spiffy-calendar.php:710
+msgid "True"
 msgstr ""
 
 #: spiffy-calendar.php:465
@@ -206,14 +216,6 @@ msgstr ""
 msgid ""
 "Entering 0 means forever. Where the recurrance interval is left at none, the "
 "event will not recur."
-msgstr ""
-
-#: spiffy-calendar.php:699 spiffy-calendar.php:709
-msgid "False"
-msgstr ""
-
-#: spiffy-calendar.php:700 spiffy-calendar.php:710
-msgid "True"
 msgstr ""
 
 #: spiffy-calendar.php:702
