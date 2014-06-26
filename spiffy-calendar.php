@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.2.0
+Version: 1.2.1
 Author: Sunny Themes
 
 Credits:
@@ -426,17 +426,17 @@ function toggleVisibility(id) {
     <td>
 			<?php
 			// interpret the hide_events value
-			if ($event->event_hide_events == 'F') { echo 'False'; }
-			else if ($event->event_hide_events == 'T') { echo 'True'; }
+			if ($event->event_hide_events == 'F') { echo __('False', 'spiffy-calendar'); }
+			else if ($event->event_hide_events == 'T') { echo __('True', 'spiffy-calendar'); }
 			 ?>
     </td>
     <td>
 			<?php
 			// interpret the show_title value
-			if ($event->event_hide_events == 'F') { echo 'N/A'; }
+			if ($event->event_hide_events == 'F') { echo __('N/A', 'spiffy-calendar'); }
 			else {      // hide_event event
-				if ($event->event_show_title == 'F') { echo 'False'; }
-				else if ($event->event_show_title == 'T') { echo 'True'; }
+				if ($event->event_show_title == 'F') { echo __('False', 'spiffy-calendar'); }
+				else if ($event->event_show_title == 'T') { echo __('True', 'spiffy-calendar'); }
 			}
 			 ?>
     </td>
@@ -683,11 +683,11 @@ function toggleVisibility(id) {
 					?> 
 					<input type="text" name="event_repeats" class="input" size="1" value="<?php echo $repeats; ?>" /> 
 					<select name="event_recur" class="input">
-						<option class="input" <?php echo $selected_s; ?> value="S"><?php _e('None') ?></option>
-						<option class="input" <?php echo $selected_w; ?> value="W"><?php _e('Weeks') ?></option>
-						<option class="input" <?php echo $selected_m; ?> value="M"><?php _e('Months (date)') ?></option>
-						<option class="input" <?php echo $selected_u; ?> value="U"><?php _e('Months (day)') ?></option>
-						<option class="input" <?php echo $selected_y; ?> value="Y"><?php _e('Years') ?></option>
+						<option class="input" <?php echo $selected_s; ?> value="S"><?php _e('None', 'spiffy-calendar') ?></option>
+						<option class="input" <?php echo $selected_w; ?> value="W"><?php _e('Weeks', 'spiffy-calendar') ?></option>
+						<option class="input" <?php echo $selected_m; ?> value="M"><?php _e('Months (date)', 'spiffy-calendar') ?></option>
+						<option class="input" <?php echo $selected_u; ?> value="U"><?php _e('Months (day)', 'spiffy-calendar') ?></option>
+						<option class="input" <?php echo $selected_y; ?> value="Y"><?php _e('Years', 'spiffy-calendar') ?></option>
 					</select><br />
 					<?php _e('Entering 0 means forever. Where the recurrance interval is left at none, the event will not recur.','spiffy-calendar'); ?><br />
 				</td>
@@ -696,8 +696,8 @@ function toggleVisibility(id) {
 				<td style="vertical-align:top;"><legend><?php _e('Hide Events','spiffy-calendar'); ?></legend></td>
 				<td>
                 <select name="event_hide_events" class="input">
-						<option class="input" <?php echo $selected_he_f; ?> value='F'><?php _e('False') ?></option>
-						<option class="input" <?php echo $selected_he_t; ?> value='T'><?php _e('True') ?></option>
+						<option class="input" <?php echo $selected_he_f; ?> value='F'><?php _e('False', 'spiffy-calendar') ?></option>
+						<option class="input" <?php echo $selected_he_t; ?> value='T'><?php _e('True', 'spiffy-calendar') ?></option>
 					</select><br />
 					<?php _e('Entering True means other events of this category will be hidden for the specifed day(s).','spiffy-calendar'); ?>
                 </td>
@@ -706,8 +706,8 @@ function toggleVisibility(id) {
 				<td style="vertical-align:top;"><legend><?php _e('','spiffy-calendar'); ?></legend></td>
                 <td><?php _e('Show Title','spiffy-calendar'); ?>&nbsp;
                 <select name="event_show_title" class="input">
-						<option class="input" <?php echo $selected_st_f; ?> value='F'><?php _e('False') ?></option>
-						<option class="input" <?php echo $selected_st_t; ?> value='T'><?php _e('True') ?></option>
+						<option class="input" <?php echo $selected_st_f; ?> value='F'><?php _e('False', 'spiffy-calendar') ?></option>
+						<option class="input" <?php echo $selected_st_t; ?> value='T'><?php _e('True', 'spiffy-calendar') ?></option>
 					</select>&nbsp;
 					<?php _e('Entering True means the title of this event will be displayed. This is only used if Hide Events is True.','spiffy-calendar'); ?>
                	</td>

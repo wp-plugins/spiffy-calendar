@@ -105,6 +105,10 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 
 == Changelog ==
 
+= Version 1.2.1 =
+
+* Encode more visible strings for translation
+
 = Version 1.2.0 =
 
 * Override selected parts of recurring event without changing original event definition, courtesy of Douglas Forester. MAKE SURE YOU DEACTIVATE AND REACTIVATE THE PLUGIN. This will happen automatically if you use the WP updater, but if you just copy the files via FTP you must do this manually to ensure the database is updated.
