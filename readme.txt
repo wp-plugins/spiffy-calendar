@@ -108,6 +108,7 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 = Version 1.2.1 =
 
 * Encode more visible strings for translation
+* French translation (Courtesy Mathieu Gaunet, www.mathieugaunet.com, contact@mathieugaunet.com)
 
 = Version 1.2.0 =
 
