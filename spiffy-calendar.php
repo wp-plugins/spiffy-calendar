@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.2.1
+Version: 1.3.0
 Author: Sunny Themes
 
 Credits:
@@ -1954,7 +1954,7 @@ function toggleVisibility(id) {
 		} else { 
 			$linky = '#'; 
 			$target = '';
-			$show = ' onclick="if (navigator.userAgent.match(/iPad|iPhone|iPod/i) != null ) jQuery(this).children(\'.popup\').toggle();return false;"';
+			$show = ' onclick="if (navigator.userAgent.match(/iPad|iPhone|iPod/i) != null ) jQuery(this).children(\'.spiffy-popup\').toggle();return false;"';
 		}
 
 		$details = '<div class="calnk"><a href="'.$linky.'" '.$style.$target.$show.'><b>' . stripslashes($event->event_title) . '</b>';
@@ -1970,7 +1970,7 @@ function toggleVisibility(id) {
 				$details .= '<br /><img class="calnk-icon" src="' . $image[0] . '" />';
 			}
 		}
-		$details .= '<div class="popup" '.$style.'>' . $popup_details . '' . stripslashes($event->event_desc) . '</div></a></div>';
+		$details .= '<div class="spiffy-popup" '.$style.'>' . $popup_details . '' . stripslashes($event->event_desc) . '</div></a></div>';
 
 		return $details;
 	}
@@ -2444,7 +2444,7 @@ ORDER BY event_id";
 		$output = '';
 		if (count($events)) {
 			// Setup the wrapper
-			$output = '<div class="calnk"><a href="#" onclick="if (navigator.userAgent.match(/iPad|iPhone|iPod/i) != null ) jQuery(this).children(\'.popup\').toggle();return false;" style="background-color:#F6F79B;">'.$day_of_week.'<div class="popup">';
+			$output = '<div class="calnk"><a href="#" onclick="if (navigator.userAgent.match(/iPad|iPhone|iPod/i) != null ) jQuery(this).children(\'.spiffy-popup\').toggle();return false;" style="background-color:#F6F79B;">'.$day_of_week.'<div class="spiffy-popup">';
 			// Now process the events
 			foreach($events as $event) {
 				if ($event->event_time == '00:00:00') { 

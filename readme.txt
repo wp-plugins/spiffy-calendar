@@ -3,7 +3,7 @@ Contributors: SunnyThemes
 Donate link: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Requires at least: 3.4
 Tested up to: 3.9
-Stable tag:trunk
+Stable tag: trunk
 License: GPLv2
 Tags:  calendar,widget,image,event,events,upcoming,time,schedule
 
@@ -14,6 +14,10 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage and display your events and appointments.
 
 [Demo](http://www.sunnythemes.com/plugins/spiffy-calendar/)
+
+Warning: Version 1.3.0 renames the hover popup DIV used to show the event details. Some users may find it necessary to add this CSS to their custom CSS when upgrading from an older version:
+
+	.calnk a:hover div.spiffy-popup { position:absolute; }
 
 = Features =
 
@@ -59,7 +63,10 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 	
 = Languages =
 
+* Dutch (Courtesy Joek Brongers)
+* French (Courtesy Mathieu Gaunet, www.mathieugaunet.com, contact@mathieugaunet.com)
 * Spanish (Courtesy of Andrew Kurtis, WebHostingHub)
+* Turkish (Courtesy Dr Abdullah Manaz, www.manaz.net)
 
 == Installation ==
 
@@ -104,6 +111,17 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 4. Event manager
 
 == Changelog ==
+
+= Version 1.3.0 =
+
+* Rename "popup" div to "spiffy-popup" to avoid conflicts with other themes/plugins
+
+Some users may find it necessary to add this CSS to their custom CSS:
+
+	.calnk a:hover div.spiffy-popup { position:absolute; }
+	
+* Turkish translation (Courtesy Dr Abdullah Manaz, www.manaz.net)
+* Dutch translation (Courtesy Joek Brongers)
 
 = Version 1.2.1 =
 
