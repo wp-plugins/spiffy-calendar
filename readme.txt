@@ -15,7 +15,7 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 [Demo](http://www.sunnythemes.com/plugins/spiffy-calendar/)
 
-Warning: Version 1.3.0 renames the hover popup DIV used to show the event details. Some users may find it necessary to add this CSS to their custom CSS when upgrading from an older version:
+Warning: Version 1.3.0 renames the hover popup DIV used to show the event details. Some users may find it necessary to add this CSS to their custom CSS when upgrading from an older version, or tick the box to restore the default CSS if you have no customizations:
 
 	.calnk a:hover div.spiffy-popup { position:absolute; }
 
