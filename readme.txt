@@ -116,7 +116,7 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 
 * Rename "popup" div to "spiffy-popup" to avoid conflicts with other themes/plugins
 
-Some users may find it necessary to add this CSS to their custom CSS:
+**Warning: Version 1.3.0 renames the hover popup DIV used to show the event details. Please check your hovering after upgrading. If it is misbehaving and you have no CSS customizations, tick the box to restore the default CSS. If you have customized CSS, please add the following:**
 
 	.calnk a:hover div.spiffy-popup { position:absolute; }
 	
