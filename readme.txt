@@ -98,7 +98,9 @@ All of the shortcodes and widgets accept a comma separated list of category IDs,
 
 == Frequently Asked Questions ==
 
-*	Nothing yet
+= I just updated the plugin and get this error: "Error: The event could not be added to the database. This may indicate a problem with your database or the way in which it is configured." =
+
+If you see this error, simply deactivate then re-activate the Spiffy Calendar plugin to correct the database.
 
 == Screenshots ==
 
