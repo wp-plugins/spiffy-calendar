@@ -1,0 +1,686 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spiffy Calendar 1.2.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/spiffy-calendar\n"
+"POT-Creation-Date: 2014-06-26 18:02:53+00:00\n"
+"PO-Revision-Date: Sat Jul 05 2014 14:20:38 GMT+0300\n"
+"Last-Translator: Abdullah Manaz <abdullahmanaz@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: Turkish\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: tr_TR\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.sunnythemes.com/plugins/spiffy-calendar/"
+msgstr "http://www.sunnythemes.com/plugins/spiffy-calendar/"
+
+#: spiffy-calendar.php:1318
+msgid "Display a jumpbox for changing month and year quickly?"
+msgstr "Ay ve Yılı kolayca değiştirmek için bir kutu görüntülensin mi?"
+
+#: spiffy-calendar.php:1326
+msgid "Display todays events?"
+msgstr "Bugünkü etkinlikleri görüntüle"
+
+#: spiffy-calendar.php:1334
+msgid "Display upcoming events?"
+msgstr "Gelecek etkinlikleri görüntüle"
+
+#: spiffy-calendar.php:1339
+msgid "for"
+msgstr "-"
+
+#: spiffy-calendar.php:1339
+msgid "days into the future"
+msgstr "güne kadar"
+
+#: spiffy-calendar.php:1343
+msgid "Enable event categories?"
+msgstr "Etkinlik kategorilerini etkinleştir?"
+
+#: spiffy-calendar.php:1351
+msgid "Open event links in new window?"
+msgstr "Etkinlik linklerini yeni bir pencerede aç?"
+
+#: spiffy-calendar.php:1359
+msgid "Configure the stylesheet for Calendar"
+msgstr "Takvim görünümünü ayarlama"
+
+#: spiffy-calendar.php:1361
+msgid "Tick this box if you wish to reset the Calendar style to default"
+msgstr "Takvim görünümünü varsayılana sıfırlamak için burayı seçin"
+
+#: spiffy-calendar.php:1563
+msgid "There are no categories in the database - something has gone wrong!"
+msgstr "Veritabanında kategori yok, bir sorun var!"
+
+#: spiffy-calendar.php:1635 spiffy-calendar.php:1640
+msgid "Next"
+msgstr "Sonraki"
+
+#: spiffy-calendar.php:1652 spiffy-calendar.php:1657
+msgid "Prev"
+msgstr "Önceki"
+
+#: spiffy-calendar.php:1760
+msgid "Mini Calendar"
+msgstr "MiniTakvim"
+
+#: spiffy-calendar.php:1771
+msgid "Calendar"
+msgstr "Takvim"
+
+#: spiffy-calendar.php:1805 spiffy-calendar.php:1815
+msgid "Today's Events"
+msgstr "Bugünkü Etkinlikler"
+
+#: spiffy-calendar.php:1848 spiffy-calendar.php:1858
+msgid "Upcoming Events"
+msgstr "Gelecek Etkinlikler"
+
+#: spiffy-calendar.php:1928
+msgid "Time"
+msgstr "Zaman"
+
+#: spiffy-calendar.php:1940
+msgid "Posted by"
+msgstr "Ekleyen"
+
+#: spiffy-calendar.php:2216 spiffy-calendar.php:2223
+msgid "Sunday"
+msgstr "Pazar"
+
+#: spiffy-calendar.php:2217 spiffy-calendar.php:2221
+msgid "Monday"
+msgstr "Pazartesi"
+
+#: spiffy-calendar.php:2217 spiffy-calendar.php:2222
+msgid "Tuesday"
+msgstr "Salı"
+
+#: spiffy-calendar.php:2217 spiffy-calendar.php:2222
+msgid "Wednesday"
+msgstr "Çarşamba"
+
+#: spiffy-calendar.php:2218 spiffy-calendar.php:2222
+msgid "Thursday"
+msgstr "Perşembe"
+
+#: spiffy-calendar.php:2218 spiffy-calendar.php:2223
+msgid "Friday"
+msgstr "Cuma"
+
+#: spiffy-calendar.php:2218 spiffy-calendar.php:2223
+msgid "Saturday"
+msgstr "Cumartesi"
+
+#: spiffy-calendar.php:2227 spiffy-calendar.php:2317 spiffy-calendar.php:2482
+msgid "January"
+msgstr "Ocak"
+
+#: spiffy-calendar.php:2227 spiffy-calendar.php:2318 spiffy-calendar.php:2482
+msgid "February"
+msgstr "Şubat"
+
+#: spiffy-calendar.php:2227 spiffy-calendar.php:2319 spiffy-calendar.php:2482
+msgid "March"
+msgstr "Mart"
+
+#: spiffy-calendar.php:2228 spiffy-calendar.php:2320 spiffy-calendar.php:2483
+msgid "April"
+msgstr "Nisan"
+
+#: spiffy-calendar.php:2228 spiffy-calendar.php:2321 spiffy-calendar.php:2483
+msgid "May"
+msgstr "Mayıs"
+
+#: spiffy-calendar.php:2228 spiffy-calendar.php:2322 spiffy-calendar.php:2483
+msgid "June"
+msgstr "Haziran"
+
+#: spiffy-calendar.php:2228 spiffy-calendar.php:2323 spiffy-calendar.php:2484
+msgid "July"
+msgstr "Temmuz"
+
+#: spiffy-calendar.php:2229 spiffy-calendar.php:2324 spiffy-calendar.php:2484
+msgid "August"
+msgstr "Ağustos"
+
+#: spiffy-calendar.php:2229 spiffy-calendar.php:2325 spiffy-calendar.php:2484
+msgid "September"
+msgstr "Eylül"
+
+#: spiffy-calendar.php:2229 spiffy-calendar.php:2326 spiffy-calendar.php:2485
+msgid "October"
+msgstr "Ekim"
+
+#: spiffy-calendar.php:2230 spiffy-calendar.php:2327 spiffy-calendar.php:2485
+msgid "November"
+msgstr "Kasım"
+
+#: spiffy-calendar.php:2230 spiffy-calendar.php:2328 spiffy-calendar.php:2485
+msgid "December"
+msgstr "Aralık"
+
+#: spiffy-calendar.php:2316
+msgid "Month"
+msgstr "Ay"
+
+#: spiffy-calendar.php:2330
+msgid "Year"
+msgstr "Yıl"
+
+#: spiffy-calendar.php:2357
+msgid "Go"
+msgstr "Git"
+
+#: spiffy-calendar.php:2451
+msgid "all day"
+msgstr "tüm gün"
+
+#: spiffy-calendar.php:2453
+msgid "at "
+msgstr "Başlama"
+
+#: spiffy-calendar.php:2455
+msgid "from "
+msgstr "Tarih"
+
+#: spiffy-calendar.php:2456
+msgid " to "
+msgstr "SonTarih"
+
+#: spiffy-calendar.php:2474 spiffy-calendar.php:2478
+msgid "Su"
+msgstr "Pz"
+
+#: spiffy-calendar.php:2474 spiffy-calendar.php:2477
+msgid "Mo"
+msgstr "Pt"
+
+#: spiffy-calendar.php:2474 spiffy-calendar.php:2477
+msgid "Tu"
+msgstr "Sl"
+
+#: spiffy-calendar.php:2475 spiffy-calendar.php:2477
+msgid "We"
+msgstr "Çr"
+
+#: spiffy-calendar.php:2475 spiffy-calendar.php:2478
+msgid "Th"
+msgstr "Pr"
+
+#: spiffy-calendar.php:2475 spiffy-calendar.php:2478
+msgid "Fr"
+msgstr "Cm"
+
+#: spiffy-calendar.php:2475 spiffy-calendar.php:2478
+msgid "Sa"
+msgstr "Ct"
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin allows you to display a calendar of all your events and "
+"appointments as a page on your site."
+msgstr ""
+"Bu eklenti, bütün etkinliklerinizi ve randevularınızı sitenizdeki bir "
+"sayfada görüntüler."
+
+#. Author of the plugin/theme
+msgid "Sunny Themes"
+msgstr "Sunny Themes"
+
+#. #-#-#-#-#  plugin.pot (Spiffy Calendar 1.2.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: spiffy-calendar.php:239
+msgid "Spiffy Calendar"
+msgstr "Spiffy Calendar"
+
+#: spiffy-calendar.php:243 spiffy-calendar.php:244 spiffy-calendar.php:1084
+msgid "Manage Events"
+msgstr "Etkinlikleri Yönet"
+
+#: spiffy-calendar.php:248 spiffy-calendar.php:1512
+msgid "Manage Categories"
+msgstr "Kategorileri Yönet"
+
+#: spiffy-calendar.php:250
+msgid "Calendar Config"
+msgstr "Takvim Konfigürasyonu"
+
+#: spiffy-calendar.php:251
+msgid "Calendar Options"
+msgstr "Takvim Seçenekleri"
+
+#: spiffy-calendar.php:379 spiffy-calendar.php:1523
+msgid "ID"
+msgstr "KimlikNo"
+
+#: spiffy-calendar.php:380 spiffy-calendar.php:1790 spiffy-calendar.php:1834
+#: spiffy-calendar.php:1877
+msgid "Title"
+msgstr "Başlık"
+
+#: spiffy-calendar.php:381 spiffy-calendar.php:558
+msgid "Start Date"
+msgstr "Başlama Tarihi"
+
+#: spiffy-calendar.php:382 spiffy-calendar.php:587
+msgid "End Date"
+msgstr "Bitiş Tarihi"
+
+#: spiffy-calendar.php:383
+msgid "Start Time"
+msgstr "Başlama Zamanı"
+
+#: spiffy-calendar.php:384
+msgid "End Time"
+msgstr "Bitiş Zamanı"
+
+#: spiffy-calendar.php:385
+msgid "Recurs"
+msgstr "Yenileme"
+
+#: spiffy-calendar.php:386
+msgid "Repeats"
+msgstr "Tekrarlar"
+
+#: spiffy-calendar.php:387 spiffy-calendar.php:696
+msgid "Hide Events"
+msgstr "Etkinlikleri Gizle"
+
+#: spiffy-calendar.php:388 spiffy-calendar.php:707
+msgid "Show Title"
+msgstr "Başlık Göster"
+
+#: spiffy-calendar.php:389 spiffy-calendar.php:715
+msgid "Image"
+msgstr "Simge"
+
+#: spiffy-calendar.php:390 spiffy-calendar.php:1293
+msgid "Author"
+msgstr "Yazar"
+
+#: spiffy-calendar.php:392 spiffy-calendar.php:459 spiffy-calendar.php:1526
+#: spiffy-calendar.php:1539
+msgid "Edit"
+msgstr "Düzelt"
+
+#: spiffy-calendar.php:393 spiffy-calendar.php:465 spiffy-calendar.php:1527
+#: spiffy-calendar.php:1550
+msgid "Delete"
+msgstr "Sil"
+
+#: spiffy-calendar.php:406 spiffy-calendar.php:407 spiffy-calendar.php:421
+#: spiffy-calendar.php:436 spiffy-calendar.php:1542
+msgid "N/A"
+msgstr "YOK"
+
+#: spiffy-calendar.php:411
+msgid "Never"
+msgstr "Asla"
+
+#: spiffy-calendar.php:412
+msgid "Weekly"
+msgstr "Haftalık"
+
+#: spiffy-calendar.php:413
+msgid "Monthly (date)"
+msgstr "Aylık (tarihsel)"
+
+#: spiffy-calendar.php:414
+msgid "Monthly (day)"
+msgstr "Aylık (günlük)"
+
+#: spiffy-calendar.php:415
+msgid "Yearly"
+msgstr "Yıllık"
+
+#: spiffy-calendar.php:422
+msgid "Forever"
+msgstr "Herzaman"
+
+#: spiffy-calendar.php:423
+msgid "Times"
+msgstr "Kere"
+
+#: spiffy-calendar.php:429 spiffy-calendar.php:438 spiffy-calendar.php:699
+#: spiffy-calendar.php:709
+msgid "False"
+msgstr "Hayır"
+
+#: spiffy-calendar.php:430 spiffy-calendar.php:439 spiffy-calendar.php:700
+#: spiffy-calendar.php:710
+msgid "True"
+msgstr "Evet"
+
+#: spiffy-calendar.php:465
+msgid "Are you sure you want to delete the event titled &quot;"
+msgstr "&quot; olarak isimlendirilmiş etkinliği silmek istiyor musunuz?"
+
+#: spiffy-calendar.php:476
+msgid "<p>There are no events in the database!</p>"
+msgstr "<p>Veritabanında etkinlik yok!</p>"
+
+#: spiffy-calendar.php:489
+msgid "Bad event ID"
+msgstr "Etkinlik kimlikno geçersiz"
+
+#: spiffy-calendar.php:495
+msgid "An event with that ID couldn't be found"
+msgstr "Belirtilen kimlikno ile bir etkinlik bulunamadı"
+
+#: spiffy-calendar.php:521
+msgid "Event Title"
+msgstr "Etkinlik Başlığı"
+
+#: spiffy-calendar.php:526
+msgid "Event Description"
+msgstr "Etkinlik Açıklaması"
+
+#: spiffy-calendar.php:532
+msgid "Event Category"
+msgstr "Etkinlik Kategorisi"
+
+#: spiffy-calendar.php:554
+msgid "Event Link (Optional)"
+msgstr "Etkinlik Adresi (Link-isteğe bağlı)"
+
+#: spiffy-calendar.php:571
+msgid "Start Time (hh:mm)"
+msgstr "Başlama Zamanı"
+
+#: spiffy-calendar.php:583 spiffy-calendar.php:609
+msgid "Optional, set blank if not required. Ignored for \"Hide Events\"."
+msgstr "Gerekmedikçe boş bırakınız, Etkinlikleri Gizle seçeneğini yok sayar."
+
+#: spiffy-calendar.php:599
+msgid "End Time (hh:mm)"
+msgstr "Bitiş Zamanı"
+
+#: spiffy-calendar.php:613
+msgid "Recurring Events"
+msgstr "Yinelenen Etkinlikler"
+
+#: spiffy-calendar.php:682
+msgid "Repeats for"
+msgstr "Tekrar Sayısı"
+
+#: spiffy-calendar.php:686
+msgid "None"
+msgstr "Hayır"
+
+#: spiffy-calendar.php:687
+msgid "Weeks"
+msgstr "Hafta"
+
+#: spiffy-calendar.php:688
+msgid "Months (date)"
+msgstr "Ay (tarih)"
+
+#: spiffy-calendar.php:689
+msgid "Months (day)"
+msgstr "Ay (gün)"
+
+#: spiffy-calendar.php:690
+msgid "Years"
+msgstr "Yıl"
+
+#: spiffy-calendar.php:692
+msgid ""
+"Entering 0 means forever. Where the recurrance interval is left at none, the "
+"event will not recur."
+msgstr "HerZaman için 0 giriniz. Tekrarlanma aralığı olmadığında etkinlik yinelenmez."
+
+#: spiffy-calendar.php:702
+msgid ""
+"Entering True means other events of this category will be hidden for the "
+"specifed day(s)."
+msgstr ""
+"Evet derseniz, belirtilen günlerde bu kategorideki etkinlikler gizlenmiş "
+"olacaktır."
+
+#: spiffy-calendar.php:712
+msgid ""
+"Entering True means the title of this event will be displayed. This is only "
+"used if Hide Events is True."
+msgstr ""
+"Evet derseniz bu etkinliğin başlığı görünlenecektir. Bu seçenek, "
+"Etkinlikleri Gizle etkinse kullanılır."
+
+#: spiffy-calendar.php:735 spiffy-calendar.php:1367 spiffy-calendar.php:1459
+#: spiffy-calendar.php:1510
+msgid "Save"
+msgstr "Kaydet"
+
+#: spiffy-calendar.php:800
+msgid "Failure"
+msgstr "Başarısız"
+
+#: spiffy-calendar.php:800
+msgid "You can't update an event if you haven't submitted an event id"
+msgstr "Kimlikno olmayan bir etkinliği güncelleyemezsiniz."
+
+#: spiffy-calendar.php:835 spiffy-calendar.php:842 spiffy-calendar.php:849
+#: spiffy-calendar.php:863 spiffy-calendar.php:877 spiffy-calendar.php:888
+#: spiffy-calendar.php:898 spiffy-calendar.php:909 spiffy-calendar.php:983
+#: spiffy-calendar.php:989 spiffy-calendar.php:1033 spiffy-calendar.php:1058
+msgid "Error"
+msgstr "Hata"
+
+#: spiffy-calendar.php:835
+msgid "Your event end date must be either after or the same as your event begin date"
+msgstr "Etkinlik bitiş tarihi, başlama tarihi ile aynı veya sonra olmalıdır."
+
+#: spiffy-calendar.php:842
+msgid ""
+"Your date formatting is correct but one or more of your dates is invalid. "
+"Check for number of days in month and leap year related errors."
+msgstr ""
+"Tarih formatınız doğru fakat tarih girdilerinizden bir veya daha fazlası "
+"geçersiz. Ay içerisindeki günleri ve artık yıl durumunu kontrol ediniz."
+
+#: spiffy-calendar.php:849
+msgid "Both start and end dates must be entered and be in the format YYYY-MM-DD"
+msgstr ""
+"Hem başlama hem de bitiş tarihleri, belirlenen formatlarda olmalıdır YYYY-MM-"
+"DD"
+
+#: spiffy-calendar.php:863
+msgid "The time field must either be blank or be entered in the format hh:mm am/pm"
+msgstr ""
+"Zaman değeri ya boş bırakılmalı veya zaman formatında girilmelidir hh:mm "
+"am/pm"
+
+#: spiffy-calendar.php:877
+msgid ""
+"The end time field must either be blank or be entered in the format hh:mm "
+"am/pm"
+msgstr ""
+"Zaman değeri ya boş bırakılmalı veya zaman formatında girilmelidir hh:mm "
+"am/pm"
+
+#: spiffy-calendar.php:888
+msgid "The URL entered must either be prefixed with http:// or be completely blank"
+msgstr "Link değeri ya http:// öneki ile girilmeli veya tamamen boş bırakılmalıdır"
+
+#: spiffy-calendar.php:898
+msgid "The event title must be between 1 and 30 characters in length"
+msgstr "Etkinlik başlığı 1-30 karakter aralığında olmalıdır"
+
+#: spiffy-calendar.php:909
+msgid ""
+"The repetition value must be 0 unless a type of recurrance is selected in "
+"which case the repetition value must be 0 or higher"
+msgstr ""
+"Yineleme değeri 0'dan daha yüksek olarak belirtilmediği sürece, 0 olarak "
+"bırakılmalıdır."
+
+#: spiffy-calendar.php:983
+msgid ""
+"The event could not be added to the database. This may indicate a problem "
+"with your database or the way in which it is configured."
+msgstr ""
+"Etkinlik veritabanına eklenemedi. Veritabanınızda veya kurgularınızda bir "
+"sorun olabilir."
+
+#: spiffy-calendar.php:989
+msgid ""
+"The event could not be updated. This may indicate a problem with your "
+"database or the way in which it is configured."
+msgstr ""
+"Etkinlik güncellenemedi. Veritabanınızda veya kurgularınızla bir sorun "
+"olabilir."
+
+#: spiffy-calendar.php:996
+msgid "Event added. It will now show in your calendar."
+msgstr "Etkinlik eklendi, takviminizde görüntülenecek"
+
+#: spiffy-calendar.php:1002
+msgid "Event updated successfully."
+msgstr "Etkinlik başarıyla güncellendi."
+
+#: spiffy-calendar.php:1033
+msgid "You can't delete an event if you haven't submitted an event id"
+msgstr "Kimlikno olmayan bir etkinlik silinemez"
+
+#: spiffy-calendar.php:1054
+msgid "Event deleted successfully"
+msgstr "Etkinlik başarıyla silindi"
+
+#: spiffy-calendar.php:1058
+msgid ""
+"Despite issuing a request to delete, the event still remains in the database."
+" Please investigate."
+msgstr ""
+"Silmek istemenize rağmen, etkinlik veritabanınızda kalıyor, Lütfen durumu "
+"araştırın."
+
+#: spiffy-calendar.php:1072
+msgid "Edit Event"
+msgstr "Etkinlik Düzelt"
+
+#: spiffy-calendar.php:1075
+msgid "You must provide an event id in order to edit it"
+msgstr "Düzeltmek için etkinlik kimlikno olmalıdır."
+
+#: spiffy-calendar.php:1081
+msgid "Add Event"
+msgstr "Etkinlik Ekle"
+
+#: spiffy-calendar.php:1171
+msgid "Settings saved"
+msgstr "Ayarlar kaydedildi"
+
+#: spiffy-calendar.php:1281
+msgid "Spiffy Calendar Options"
+msgstr "Spiffy Calendar Seçenekleri"
+
+#: spiffy-calendar.php:1289
+msgid "Choose the lowest user group that may manage events"
+msgstr "Etkinlikleri düzenleyebilecek EnDüşük kullanıcı grubunu seçiniz"
+
+#: spiffy-calendar.php:1291
+msgid "Subscriber"
+msgstr "Takipeden"
+
+#: spiffy-calendar.php:1292
+msgid "Contributor"
+msgstr "Düzenleyici"
+
+#: spiffy-calendar.php:1294
+msgid "Editor"
+msgstr "Yazar"
+
+#: spiffy-calendar.php:1295
+msgid "Administrator"
+msgstr "Yönetici"
+
+#: spiffy-calendar.php:1300
+msgid "Do you want to display the author name on events?"
+msgstr "Yazar adının etkinliklerde görüntülenmesini ister misiniz?"
+
+#: spiffy-calendar.php:1302 spiffy-calendar.php:1310 spiffy-calendar.php:1320
+#: spiffy-calendar.php:1328 spiffy-calendar.php:1336 spiffy-calendar.php:1345
+#: spiffy-calendar.php:1353
+msgid "Yes"
+msgstr "Evet"
+
+#: spiffy-calendar.php:1303 spiffy-calendar.php:1311 spiffy-calendar.php:1321
+#: spiffy-calendar.php:1329 spiffy-calendar.php:1337 spiffy-calendar.php:1346
+#: spiffy-calendar.php:1354
+msgid "No"
+msgstr "Hayır"
+
+#: spiffy-calendar.php:1308
+msgid "Do you want to enable detailed event display?"
+msgstr "Etkinlik detaylarının görüntülenmesini ister misiniz?"
+
+#: spiffy-calendar.php:1314
+msgid ""
+"When this option is enabled the time and image will be listed with the event "
+"title. Note that time and image are always displayed in the popup window."
+msgstr ""
+"Bu seçenek etkinleştirildiğinde, Zaman ve Simge etkinlik başlığıla birlikte "
+"listelenecektir. Not: Zaman ve Simge açılan pencerede her zaman "
+"görüntülenmektedir."
+
+#: spiffy-calendar.php:391
+msgid "Category"
+msgstr "Kategori"
+
+#: spiffy-calendar.php:1420
+msgid "Category added successfully"
+msgstr "Kategori başarıyla kaydedildi"
+
+#: spiffy-calendar.php:1431
+msgid "Category deleted successfully"
+msgstr "Kategori başarıyla silindi"
+
+#: spiffy-calendar.php:1439
+msgid "Edit Category"
+msgstr "Kategori Düzelt"
+
+#: spiffy-calendar.php:1448 spiffy-calendar.php:1499 spiffy-calendar.php:1524
+msgid "Category Name"
+msgstr "Kategori İsmi"
+
+#: spiffy-calendar.php:1452 spiffy-calendar.php:1503
+msgid "Category Colour (Hex format)"
+msgstr "Kategori Rengi (Hex Formatında)"
+
+#: spiffy-calendar.php:1471
+msgid "Category edited successfully"
+msgstr "Kategori başarıyla düzeltildi"
+
+#: spiffy-calendar.php:1490
+msgid "Add Category"
+msgstr "Kategori Ekle"
+
+#: spiffy-calendar.php:1525
+msgid "Category Colour"
+msgstr "Kategori Rengi"
+
+#: spiffy-calendar.php:1550
+msgid "Are you sure you want to delete the category named &quot;"
+msgstr "&quot; olarak isimlendirilmiş kategoriyi silmek istiyor musunuz?"
+
+#: spiffy-calendar.php:1792 spiffy-calendar.php:1836 spiffy-calendar.php:1879
+msgid "Comma separated category id list"
+msgstr "Kategori kimlik numaraları arasına virgül koyunuz"
+
+#: spiffy-calendar.php:2425
+msgid "Category Key"
+msgstr "Takvim Kategorisi"
