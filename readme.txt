@@ -119,6 +119,7 @@ If you see this error, simply deactivate then re-activate the Spiffy Calendar pl
 = Version 1.3.1 =
 
 * Replace occurrences of mysql_real_escape_string (deprecated on some servers) with esc_sql
+* Remove the test for 30 characters when saving an event in the DB
 * Polish translation courtesy of Krzysztof Kacprzyk 
 * Swedish translation courtesy of Kenneth Andersson
 
