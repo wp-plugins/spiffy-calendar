@@ -3,7 +3,7 @@
 Plugin Name: Spiffy Calendar
 Plugin URI: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Description: This plugin allows you to display a calendar of all your events and appointments as a page on your site.
-Version: 1.3.0
+Version: 1.3.1
 Author: Sunny Themes
 
 Credits:
@@ -207,7 +207,7 @@ Class Spiffy_Calendar
 		global $wpdb;
 
 		// Do the query
-		$wpdb->get_results("UPDATE ".WP_SPIFFYCAL_TABLE." SET event_author=".$wpdb->get_var("SELECT MIN(ID) FROM ".$wpdb->prefix."users",0,0)." WHERE 					event_author=".mysql_real_escape_string($id));
+		$wpdb->get_results("UPDATE ".WP_SPIFFYCAL_TABLE." SET event_author=".$wpdb->get_var("SELECT MIN(ID) FROM ".$wpdb->prefix."users",0,0)." WHERE 					event_author=".esc_sql($id));
 	}
 
 	// Function to provide time with WordPress offset, localy replaces time()
@@ -450,7 +450,7 @@ function toggleVisibility(id) {
 	</td>
 	<td><?php $e = get_userdata($event->event_author); echo $e->display_name; ?></td>
 			<?php
-			$sql = "SELECT * FROM " . WP_SPIFFYCAL_CATEGORIES_TABLE . " WHERE category_id=".mysql_real_escape_string($event->event_category);
+			$sql = "SELECT * FROM " . WP_SPIFFYCAL_CATEGORIES_TABLE . " WHERE category_id=".esc_sql($event->event_category);
 			$this_cat = $wpdb->get_row($sql);
 			?>
 	<td style="background-color:<?php echo $this_cat->category_colour;?>;"><?php echo stripslashes($this_cat->category_name); ?>
@@ -490,7 +490,7 @@ function toggleVisibility(id) {
 				return;
 			} else {
 				$data = $wpdb->get_results("SELECT * FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . 
-								mysql_real_escape_string($event_id) . "' LIMIT 1");
+								esc_sql($event_id) . "' LIMIT 1");
 				if ( empty($data) ) {
 					echo "<div class=\"error\"><p>".__("An event with that ID couldn't be found",'spiffy-calendar')."</p></div>";
 					return;
@@ -520,7 +520,7 @@ function toggleVisibility(id) {
 				<tr>				
 				<td><legend><?php _e('Event Title','spiffy-calendar'); ?></legend></td>
 				<td><input type="text" name="event_title" class="input" size="40" maxlength="30"
-					value="<?php if ( !empty($data) ) echo htmlspecialchars(stripslashes($data->event_title)); ?>" /></td>
+					value="<?php if ( !empty($data) ) echo htmlspecialchars(stripslashes($data->event_title)); ?>" /> <?php _e('Maximum 30 characters.','spiffy-calendar'); ?></td>
 				</tr>
 				<tr>
 				<td style="vertical-align:top;"><legend><?php _e('Event Description','spiffy-calendar'); ?></legend></td>
@@ -889,13 +889,13 @@ function toggleVisibility(id) {
 
 			<?php
 		}
-		// The title must be at least one character in length and no more than 30
-		if (preg_match('/^.{1,30}$/',$title)) {
+		// The title must be non-blank
+		if ($title != '') {
 			$title_ok =1;
 		} else {
 			?>
 
-<div class="error"><p><strong><?php _e('Error','spiffy-calendar'); ?>:</strong> <?php _e('The event title must be between 1 and 30 characters in length','spiffy-calendar'); ?></p></div>
+<div class="error"><p><strong><?php _e('Error','spiffy-calendar'); ?>:</strong> <?php _e('The event title must not be blank','spiffy-calendar'); ?></p></div>
 
 			<?php
 		}
@@ -967,7 +967,7 @@ function toggleVisibility(id) {
 					'event_image' => $event_image, 
 					'event_author' => $current_user->ID, 
 					'event_category' => $category,
-				 	'event_link' => mysql_real_escape_string($linky)
+				 	'event_link' => esc_sql($linky)
 					);
 
 			if ($action == 'add') {
@@ -1035,7 +1035,7 @@ function toggleVisibility(id) {
 			<?php			
 		} else {
 			// First delete the image, if any
-			$sql = "SELECT event_image FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . mysql_real_escape_string($event_id) . "'";
+			$sql = "SELECT event_image FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . esc_sql($event_id) . "'";
 			$result = $wpdb->get_results($sql);
 
 			// Delete previous background image, if any
@@ -1043,10 +1043,10 @@ function toggleVisibility(id) {
 				wp_delete_attachment( $result[0]->event_image);
 			}
 
-			$sql = "DELETE FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . mysql_real_escape_string($event_id) . "'";
+			$sql = "DELETE FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . esc_sql($event_id) . "'";
 			$wpdb->get_results($sql);
 		
-			$sql = "SELECT event_id FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . mysql_real_escape_string($event_id) . "'";
+			$sql = "SELECT event_id FROM " . WP_SPIFFYCAL_TABLE . " WHERE event_id='" . esc_sql($event_id) . "'";
 			$result = $wpdb->get_results($sql);
 		
 			if ( empty($result) || empty($result[0]->event_id) ) {
@@ -1415,7 +1415,7 @@ function toggleVisibility(id) {
 			if (! wp_verify_nonce($nonce,'spiffy-add-category-nonce') ) die("Security check failed");
 
 			// Proceed with the save		
-			$sql = "INSERT INTO " . WP_SPIFFYCAL_CATEGORIES_TABLE . " SET category_name='".mysql_real_escape_string($_POST['category_name'])."', category_colour='".mysql_real_escape_string($_POST['category_colour'])."'";
+			$sql = "INSERT INTO " . WP_SPIFFYCAL_CATEGORIES_TABLE . " SET category_name='".esc_sql($_POST['category_name'])."', category_colour='".esc_sql($_POST['category_colour'])."'";
 			$wpdb->get_results($sql);
 			echo "<div class=\"updated\"><p><strong>".__('Category added successfully','spiffy-calendar')."</strong></p></div>";
 
@@ -1432,7 +1432,7 @@ function toggleVisibility(id) {
 
 		} else if (isset($_GET['mode']) && isset($_GET['category_id']) && $_GET['mode'] == 'edit' && !isset($_POST['mode'])) {
 
-			$sql = "SELECT * FROM " . WP_SPIFFYCAL_CATEGORIES_TABLE . " WHERE category_id=".intval(mysql_real_escape_string($_GET['category_id']));
+			$sql = "SELECT * FROM " . WP_SPIFFYCAL_CATEGORIES_TABLE . " WHERE category_id=".intval(esc_sql($_GET['category_id']));
 			$cur_cat = $wpdb->get_row($sql);
 			?>
 	<div class="wrap">
@@ -1466,7 +1466,7 @@ function toggleVisibility(id) {
 			if (! wp_verify_nonce($nonce,'spiffy-edit-category-nonce') ) die("Security check failed");
 
 			// Proceed with the save
-			$sql = "UPDATE " . WP_SPIFFYCAL_CATEGORIES_TABLE . " SET category_name='".mysql_real_escape_string($_POST['category_name'])."', category_colour='".mysql_real_escape_string($_POST['category_colour'])."' WHERE category_id=".mysql_real_escape_string($_POST['category_id']);
+			$sql = "UPDATE " . WP_SPIFFYCAL_CATEGORIES_TABLE . " SET category_name='".esc_sql($_POST['category_name'])."', category_colour='".esc_sql($_POST['category_colour'])."' WHERE category_id=".esc_sql($_POST['category_id']);
 			$wpdb->get_results($sql);
 			echo "<div class=\"updated\"><p><strong>".__('Category edited successfully','spiffy-calendar')."</strong></p></div>";
 		}
@@ -2245,7 +2245,7 @@ ORDER BY event_id";
 
 					// Again nasty code to map permalinks into something
 					// databases can understand. This will be cleaned up
-					$c_year = mysql_real_escape_string($_GET['yr']);
+					$c_year = esc_sql($_GET['yr']);
 					if ($_GET['month'] == 'jan') { $t_month = 1; }
 					else if ($_GET['month'] == 'feb') { $t_month = 2; }
 					else if ($_GET['month'] == 'mar') { $t_month = 3; }
@@ -2502,7 +2502,7 @@ ORDER BY event_id";
 
 					// Again nasty code to map permalinks into something 
 					// databases can understand. This will be cleaned up
-					$c_year = mysql_real_escape_string($_GET['yr']);
+					$c_year = esc_sql($_GET['yr']);
 					if ($_GET['month'] == 'jan') { $t_month = 1; }
 					else if ($_GET['month'] == 'feb') { $t_month = 2; }
 					else if ($_GET['month'] == 'mar') { $t_month = 3; }

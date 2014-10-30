@@ -65,7 +65,9 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 
 * Dutch (Courtesy Joek Brongers)
 * French (Courtesy Mathieu Gaunet, www.mathieugaunet.com, contact@mathieugaunet.com)
+* Polish (Courtesy of Krzysztof Kacprzyk)
 * Spanish (Courtesy of Andrew Kurtis, WebHostingHub)
+* Swedish (Courtesy of Kenneth Andersson)
 * Turkish (Courtesy Dr Abdullah Manaz, www.manaz.net)
 
 == Installation ==
@@ -113,6 +115,12 @@ If you see this error, simply deactivate then re-activate the Spiffy Calendar pl
 4. Event manager
 
 == Changelog ==
+
+= Version 1.3.1 =
+
+* Replace occurrences of mysql_real_escape_string (deprecated on some servers) with esc_sql
+* Polish translation courtesy of Krzysztof Kacprzyk 
+* Swedish translation courtesy of Kenneth Andersson
 
 = Version 1.3.0 =
 
