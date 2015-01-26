@@ -1,6 +1,5 @@
 === Spiffy Calendar ===
 Contributors: SunnyThemes
-Donate link: http://www.sunnythemes.com/plugins/spiffy-calendar/
 Requires at least: 3.4
 Tested up to: 4.0
 Stable tag: trunk
@@ -12,8 +11,6 @@ A full featured, simple to use Spiffy Calendar plugin for WordPress that allows 
 == Description ==
 
 A full featured, simple to use Spiffy Calendar plugin for WordPress that allows you to manage and display your events and appointments.
-
-[Demo](http://www.sunnythemes.com/plugins/spiffy-calendar/)
 
 **Warning: Version 1.3.0 renames the hover popup DIV used to show the event details. Please check your hovering after upgrading. If it is misbehaving and you have no CSS customizations, tick the box to restore the default CSS. If you have customized CSS, please add the following:**
 
